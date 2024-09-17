@@ -1,0 +1,20 @@
+#customBtn {
+    background: rgb(157,255,0);
+    background: linear-gradient(90deg, rgba(157,255,0,1) 0%, rgba(0,255,233,1) 41%, rgba(255,237,0,1) 100%);
+    -webkit-box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
+    -moz-box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
+    box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
+}
+
+.infoNavbar {
+    font-size: 1em;
+}
+
+
+
+@media (max-width: 768px) { /* md breakpoint */
+  .infoNavbar {
+    font-size: 0.6em;
+    
+}
+}

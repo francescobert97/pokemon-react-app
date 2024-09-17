@@ -1,0 +1,10 @@
+
+
+  .cmBackground {
+    width: 80%;
+    background: var(--gradient-color);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    clip-path: polygon(0 -160%, 0 100%, 100% 100%);
+
+}

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MyProvider } from './context';
+
+import Navbar from './layout/navbar/Navbar';
+import { useSelector } from 'react-redux';
+import PokemonInformation from './pages/pokemonInformation/PokemonInformation';
+import Team from './pages/team/Team';
+import Box from './pages/box/Box';
+import Pokedex from './pages/pokedex/pokedex';
+import ProtectedRoute from './utils/guards/ProtectedRoute';
+import Home from './pages/home/Home';
+
 
 function App() {
+  const store = useSelector(state => state.pkmnInformation.pkmnInformation)
+  console.log(store)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Router>
+            <MyProvider>
+              <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/team/*" element={<Team />}/>                  
+              <Route path="/box" element={<Box />}/>
+              <Route path="/pokedex" element={<Pokedex />}/>
+              <Route path="/information/:pkmn/*" element={
+                <ProtectedRoute condition={store.uniqueId}>
+                  <PokemonInformation />
+                </ProtectedRoute> 
+              }/>
+            </Routes>
+          </MyProvider>
+
+        </Router>
   );
 }
 

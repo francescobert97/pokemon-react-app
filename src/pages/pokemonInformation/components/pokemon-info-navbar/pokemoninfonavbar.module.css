@@ -1,0 +1,27 @@
+#infoNavbar {
+}
+
+
+
+
+@media (max-width: 768px) { /* md breakpoint */
+    #infoNavbar {
+      position: relative;
+
+  }
+
+  #infoNavbar ul{
+    font-size: 0.6em;
+    position: absolute;
+    flex-direction: column;
+    top: 55px;
+    left: 0;
+    z-index: 1000;
+    
+    }
+
+    #infoNavbar button{
+        width: 100%;
+    margin-top: 1.5rem;
+    }
+}

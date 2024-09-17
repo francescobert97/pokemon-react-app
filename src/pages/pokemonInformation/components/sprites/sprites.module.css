@@ -1,0 +1,16 @@
+.sprites {
+    
+}
+
+.sprites img {
+    zoom: 300%;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid red; /* Colore del triangolo */
+  }
