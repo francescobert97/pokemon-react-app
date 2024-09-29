@@ -2,7 +2,7 @@
     --gradient-color: linear-gradient(90deg, rgba(157,255,0,1) 0%, rgba(0,255,233,1) 41%, rgba(255,237,0,1) 100%);
 }
 body {
-    background: url('./assets/pokemon-main-background.jpeg') no-repeat;
+    background: url('./assets/pokemon-main-background.webp') no-repeat;
     background-size: cover;
 }
 

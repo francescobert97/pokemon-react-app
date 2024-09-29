@@ -6,12 +6,14 @@ import { downloadData, downloadData2 } from "../../../utils/downloadData";
 
 const Abilities = ({abilities}) => {
     const [fetchedAbilitiesData, setFetchedAbilitiesData] = useState([])
-  
+    
+    const setAbilitiesdata = async () => {
+        setFetchedAbilitiesData(await downloadData2(abilities,'ability'))
+    }
     useEffect( () => {
-        downloadData2(abilities,'ability', setFetchedAbilitiesData)
+        setAbilitiesdata();
     },[])
 
-    console.log(fetchedAbilitiesData)
     return (
         <div className="bg-dark p-3 rounded mt-5">
             {abilities && fetchedAbilitiesData.map(ability => (

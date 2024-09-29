@@ -39,7 +39,7 @@ const Home = () => {
     return (
        
         <div className="container-fluid  position-relative p-5">
-            <div className="row gap-5">
+            <div className="row gap-5 justify-content-between">
                 <IconBoxMenu iconName={'pokedex'} classes={'bg-dark d-flex flex-column align-items-center justify-content-center p-5 rounded gap-5 col-10 offset-1 offset-sm-0 col-sm-3'} pathLink={'pokedex'} btnLabel={'Pokedex'} dimension={{width: '10rem', height: '10rem'}}/>
 
                 <IconBoxMenu iconName={'pokeball-transparent-bg'} classes={'bg-dark d-flex flex-column align-items-center justify-content-center p-5 rounded gap-5 col-10 offset-1 offset-sm-0 col-sm-3'} pathLink={'team'} btnLabel={'Team'} dimension={{width: '10rem', height: '10rem'}}/>
@@ -51,7 +51,7 @@ const Home = () => {
                 </IconBoxMenu>
             </div>
 
-             {showCatch && <CatchPkmn catchedPokemon={catchedPokemon} updateShowCatch={updateShowCatch} />}
+             {(showCatch && catchedPokemon) && <CatchPkmn catchedPokemon={catchedPokemon} updateShowCatch={updateShowCatch} />}
 
            
         </div>

@@ -8,7 +8,7 @@ import Abilities from "./components/Abilities";
 import PokemonInfoNavbar from "./components/pokemon-info-navbar/PokemonInfoNavbar";
 import Sprites from "./components/sprites/Sprites";
 import Stats from "./components/Stats";
-import Moves from "./moves/Moves";
+import Moves from "./components/moves/Moves";
 
 
 const PokemonInformation = () => {

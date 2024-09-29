@@ -1,16 +1,9 @@
 .pokedex {
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-
-
-  
-.pokedex:nth-child(1) {
-  max-height: 100vh;
-}
-
-  
-.pokedex:nth-child(2) {
-  max-height: 100vh;
+.specific {
   overflow-y: scroll;
-
+  max-height: 100vh;
 }

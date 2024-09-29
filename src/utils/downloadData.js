@@ -8,14 +8,16 @@ export const downloadData2 = async (itemUrls, nameData,settingFn) => {
 
   const result = await Promise.all(itemUrls.map(async itemUrl =>  await baseApiCall(itemUrl[nameData].url)))
   console.log(result)
-  settingFn(result)
+  //settingFn(result)
+  return result
 }
 
 
-export const downloadData3 = async (items, namesData, fn) => {
+export const downloadData3 = async (items, namesData) => {
     const accData = []
     let count = 0
-  console.log(items[0])
+    console.log(namesData)
+  console.log(items)
                   let memoize=items
                   while(count < namesData.length) {
                     console.log(count)
@@ -23,7 +25,7 @@ export const downloadData3 = async (items, namesData, fn) => {
                     accData.push(memoize);
                     count++
                   }
-        fn(accData)
+        return accData
               
            
 }

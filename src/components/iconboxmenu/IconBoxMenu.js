@@ -10,8 +10,8 @@ const importAll = (r) => {
     return images;
   };
 
-  const imgs = importAll(require.context('../../assets', false, /\.(png|jpe?g|svg)$/));
-
+  const imgs = importAll(require.context('../../assets', false, /\.(webp|png|jpe?g|svg)$/));
+  console.log(imgs)
 const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}) => {
  const image = Object.entries(imgs).find(imgLink => imgLink[0] === iconName)
 

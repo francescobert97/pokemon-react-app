@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { downloadData, downloadData2 } from "../../utils/downloadData";
 import styles from './cmtooltip.module.css'
 
-const CmTooltip = ({data, propName}) => {
+const CmTooltip = ({data, propName, position}) => {
     const [deta, setData] = useState({})
     useEffect(()=> {
         console.log(data.type)
@@ -10,10 +10,9 @@ const CmTooltip = ({data, propName}) => {
         
     }, [])
     console.log(deta)
-    return (<div className={`${styles.cmTooltip} text-dark p-4 rounded position-absolute top-50`}>
-        tooltip
-            
-            {propName.map(prop => <div>
+    return (<div className={`${styles.cmTooltip} text-dark p-4 rounded position-absolute`} style={position}>            
+            {propName.map(prop => <div className="bg-light p-2 rounded mt-1 text-center">
+                <p className={`${styles.cmTooltip} rounded p-2`}>{prop}</p>
                 <p>{data[prop]}</p>
             </div>)}
             

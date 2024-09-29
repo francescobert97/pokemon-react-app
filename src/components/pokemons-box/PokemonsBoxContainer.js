@@ -52,7 +52,7 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
                         <div key={index}> 
                                 <CustomBtn classes={'p-2 mt-3'} conditionToDisableBtn={modalState.disableOtherBtns} label={type.label} fn={{fn:setModalProperties, parameters:[type,pkmn]}} />
                                 { (modalState.pkmnId === pkmn.uniqueId && type.modalMsg.find(m => m.id === modalState.modalId) ) &&
-                                    <CustomModal classes={'bg-dark p-5 rounded d-flex flex-column align-items-center'} message={modalState.message}>
+                                    <CustomModal classes={'bg-dark p-5 rounded d-flex flex-column align-items-center top-50 '} message={modalState.message}>
                                         <div>
                                             <CustomBtn fn={ {fn: pkmnProcessHandler, parameters: [pkmn, type]}} classes="p-2 m-1" label="yes"/>
                                             <CustomBtn fn={{fn:setModalState , parameters: [{pkmnId: null, modalId: null, disableOtherBtns: false, message: ''}]}} classes="p-2 m-1" label="no" />
