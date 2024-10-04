@@ -1,7 +1,4 @@
 
-import geison from '../mock-pkmn.json'
-
-
 export const getAllPokemonNameList = async () => {
 	const endpoint = 'pokemon?limit=100000&offset=0'
 	console.log('ATTIVAZINE!!')
@@ -20,14 +17,6 @@ export const getSinglePokemonInformation = async (pokemonUrl) => {
 export const getSpecificSectionsPkmnInfo = async (url) => {
 	const result = await baseApiCall(url)
 	return result
-}
-
-
-export const getMockPokemon = () =>{
-	geison.uniqueId = Math.floor(Math.random()* 10000) 
-	console.log(geison.uniqueId)
-	let obj = {...geison}
-	return obj
 }
 
 export const getPokemonTypeMoves =  (types) => {

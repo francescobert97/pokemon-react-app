@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MyProvider } from './context';
-
+import React from 'react';
 import Navbar from './layout/navbar/Navbar';
 import { useSelector } from 'react-redux';
 import PokemonInformation from './pages/pokemonInformation/PokemonInformation';
@@ -19,17 +19,17 @@ function App() {
           <Router>
             <MyProvider>
               <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/team/*" element={<Team />}/>                  
-              <Route path="/box" element={<Box />}/>
-              <Route path="/pokedex" element={<Pokedex />}/>
-              <Route path="/information/:pkmn/*" element={
-                <ProtectedRoute condition={store.uniqueId}>
-                  <PokemonInformation />
-                </ProtectedRoute> 
-              }/>
-            </Routes>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/team/*" element={<Team />}/>                  
+                <Route path="/box" element={<Box />}/>
+                <Route path="/pokedex" element={<Pokedex />}/>
+                <Route path="/information/:pkmn/*" element={
+                  <ProtectedRoute condition={store.uniqueId}>
+                    <PokemonInformation />
+                  </ProtectedRoute> 
+                }/>
+              </Routes>
           </MyProvider>
 
         </Router>

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-plugin-transform-require-context": "^0.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
@@ -40,14 +40,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
-    "jasmine-core": "^5.3.0",
-    "karma": "^6.4.4",
-    "karma-chrome-launcher": "^3.2.0",
-    "karma-cli": "^2.0.0",
-    "karma-jasmine": "^5.1.0",
-    "karma-requirejs": "^1.1.0",
-    "karma-sourcemap-loader": "^0.4.0",
-    "karma-webpack": "^5.0.1"
+    "babel-jest": "^29.7.0",
+    "css-loader": "^7.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "style-loader": "^4.0.0"
   }
 }

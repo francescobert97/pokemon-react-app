@@ -15,13 +15,13 @@ const importAll = (r) => {
 const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}) => {
  const image = Object.entries(imgs).find(imgLink => imgLink[0] === iconName)
 
-    return (     
+ return (     
     <div className={`${classes}`}>
         {
             children? children : <CustomBtn pathLink={pathLink} classes={'p-2'} label={btnLabel} />
         }
        
-        <img src={image[1]} className="w-100 h-100"  style={{maxWidth: `${dimension.width}`, maxHeight: `${dimension.height}`}} />
+        <img src={image[1]} alt="main menu button icon." className="w-100 h-100"  style={{maxWidth: `${dimension.width}`, maxHeight: `${dimension.height}`}} />
     </div>
     )
 }

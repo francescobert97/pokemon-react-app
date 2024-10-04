@@ -39,10 +39,10 @@ const PokemonInformation = () => {
                
                 <Routes>
                     <Route path="/" element={<Navigate to={"abilities"} replace />} />
-                    <Route path="/abilities" element={<Abilities abilities={pkmn.abilities}/>} />
-                    <Route path="stats" element={<Stats stats={pkmn.stats}/>} />
-                    <Route path="moves" element={<Moves moves={pkmn.moves}/>} />
-                    <Route path="sprites" element={<Sprites sprites={pkmn.sprites}/>} />
+                    <Route path="/abilities" element={<Abilities abilities={pkmn.abilities}/>} key='abilities' />
+                    <Route path="stats" element={<Stats stats={pkmn.stats}/>} key='stats' />
+                    <Route path="moves" element={<Moves moves={pkmn.moves} key='moves'/>} />
+                    <Route path="sprites" element={<Sprites sprites={pkmn.sprites}/>} key='sprites' />
                 </Routes>
                 </div>
             </div>

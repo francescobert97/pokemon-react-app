@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { MyContext } from "../../context";
 import { getAllPokemonNameList, getSinglePokemonInformation } from "../../services/pokemon.service";
 import { fetchData } from "../../redux/thunk";
 import CustomBtn from "../../components/custom-btn/CustomBtn";
@@ -13,7 +12,6 @@ const Home = () => {
     const [showCatch, updateShowCatch] = useState(false);
     const [catchedPokemon, updateCatchedPokemon] = useState({})
     const pokemonData = useSelector(state => state.fetch.data)
-    const { value, setValue } = useContext(MyContext);
     useEffect(() => {
         preventFetchDataIfTheyreAlreadyStored()
     }, [])
