@@ -5,7 +5,7 @@ const CustomModal= ({message, children, classes}) => {
         <>
             <div className={`${classes} position-absolute `}>
                             {message}
-                            {children}
+                            {children && children}
             </div>
         </>)
 

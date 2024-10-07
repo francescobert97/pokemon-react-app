@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CustomBtn from "../custom-btn/CustomBtn";
 
 const importAll = (r) => {
@@ -11,7 +10,6 @@ const importAll = (r) => {
   };
 
   const imgs = importAll(require.context('../../assets', false, /\.(webp|png|jpe?g|svg)$/));
-  console.log(imgs)
 const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}) => {
  const image = Object.entries(imgs).find(imgLink => imgLink[0] === iconName)
 
@@ -21,7 +19,7 @@ const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}
             children? children : <CustomBtn pathLink={pathLink} classes={'p-2'} label={btnLabel} />
         }
        
-        <img src={image[1]} alt="main menu button icon." className="w-100 h-100"  style={{maxWidth: `${dimension.width}`, maxHeight: `${dimension.height}`}} />
+       {iconName? <img src={image[1]} alt="main menu button icon." className="w-100 h-100"  style={{maxWidth: `${dimension.width}`, maxHeight: `${dimension.height}`}} /> : 'no image'}
     </div>
     )
 }

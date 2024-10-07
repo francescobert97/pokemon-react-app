@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CmTooltip from "../../../../components/cm-tooltip/CmTooltip";
-import { downloadData, downloadData2, downloadData3 } from "../../../../utils/downloadData";
+import { downloadData, downloadData2, downloadData3 } from "../../../../utils/downloadData/downloadData";
 import { getPokemonTypeMove, getPokemonTypeMoves } from "../../../../services/pokemon.service";
 
 

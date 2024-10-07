@@ -10,6 +10,7 @@ import Box from './pages/box/Box';
 import Pokedex from './pages/pokedex/pokedex';
 import ProtectedRoute from './utils/guards/ProtectedRoute';
 import Home from './pages/home/Home';
+import PkmnCatchArea from './pages/pkmnCatchArea/PkmnCatchArea';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/team/*" element={<Team />}/>                  
                 <Route path="/box" element={<Box />}/>
                 <Route path="/pokedex" element={<Pokedex />}/>
+                <Route path="/pkmnCatchArea" element={<PkmnCatchArea />}/>
                 <Route path="/information/:pkmn/*" element={
                   <ProtectedRoute condition={store.uniqueId}>
                     <PokemonInformation />

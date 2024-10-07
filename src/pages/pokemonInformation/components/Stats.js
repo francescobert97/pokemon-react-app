@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CustomTitleBox from "../../../components/custom-titlebox/CustomTitleBox";
 import capitalizeString from "../../../utils/capitalizeString";
-import { downloadData2, downloadData3 } from "../../../utils/downloadData";
+import { downloadData2, downloadData3 } from "../../../utils/downloadData/downloadData";
 
 
 const Stats = ({stats}) => {

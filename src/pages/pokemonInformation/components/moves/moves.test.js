@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
 function mockMove(constant) {
   return constant
 }
-jest.mock('../../../../utils/downloadData', () => ({
+jest.mock('../../../../utils/downloadData/downloadData.js', () => ({
   downloadData2: jest.fn(() => (mockMove(mockMvs)))
 }))
 jest.mock('../../../../services/pokemon.service.js', () => ({

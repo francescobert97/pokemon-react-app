@@ -1,4 +1,4 @@
-import baseApiCall from '../services/pokemon.service'
+import baseApiCall from '../../services/pokemon.service'
 if (typeof baseApiCall !== 'function') {
   console.error('baseApiCall is not a function');
 }

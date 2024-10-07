@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import capitalizeString from "../../../utils/capitalizeString";
-import { downloadData, downloadData2 } from "../../../utils/downloadData";
+import { downloadData, downloadData2 } from "../../../utils/downloadData/downloadData";
 
 
 const Abilities = ({abilities}) => {
