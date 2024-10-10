@@ -17,7 +17,7 @@ function App() {
   const store = useSelector(state => state.pkmnInformation.pkmnInformation)
   console.log(store)
   return (
-          <Router>
+          <Router basename="/pokemon-react-app">
             <MyProvider>
               <Navbar />
               <Routes>
