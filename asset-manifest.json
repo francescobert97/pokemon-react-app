@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pokemon-react-app/static/css/main.f5c9778d.css",
+    "main.js": "/pokemon-react-app/static/js/main.a07daed0.js",
+    "static/js/453.552e8657.chunk.js": "/pokemon-react-app/static/js/453.552e8657.chunk.js",
+    "static/media/pokemon-main-backgroundd.webp": "/pokemon-react-app/static/media/pokemon-main-backgroundd.28f02ce59ec1066d8eb0.webp",
+    "static/media/pokemon-main-background.webp": "/pokemon-react-app/static/media/pokemon-main-background.0110501e25b98ec11e95.webp",
+    "static/media/pngwing.com.webp": "/pokemon-react-app/static/media/pngwing.com.9d1828d17a2c02150051.webp",
+    "static/media/field-poke.webp": "/pokemon-react-app/static/media/field-poke.e9e695e282863eb81de9.webp",
+    "static/media/pokedex.webp": "/pokemon-react-app/static/media/pokedex.f957ee6665609828e86f.webp",
+    "static/media/pokeball-transparent-bg.webp": "/pokemon-react-app/static/media/pokeball-transparent-bg.e593fb51bcd62b74cde3.webp",
+    "static/media/rosso.webp": "/pokemon-react-app/static/media/rosso.a7e49dfca90f16ed1a50.webp",
+    "index.html": "/pokemon-react-app/index.html",
+    "main.f5c9778d.css.map": "/pokemon-react-app/static/css/main.f5c9778d.css.map",
+    "main.a07daed0.js.map": "/pokemon-react-app/static/js/main.a07daed0.js.map",
+    "453.552e8657.chunk.js.map": "/pokemon-react-app/static/js/453.552e8657.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5c9778d.css",
+    "static/js/main.a07daed0.js"
+  ]
+}
