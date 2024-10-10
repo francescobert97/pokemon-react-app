@@ -45,9 +45,9 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
     <div className="container-fluid">
         <CustomBtn classes={'mb-3 mt-3'} pathLink={'/'}/>
         <div className={`${classes} row`} style={{overflowY:'scroll'}}>
-        {pkmns.length > 0? pkmns.map(pkmn => (
-                <div key={pkmn.uniqueId} className="d-flex flex-column align-items-center justify-content-center bg-light rounded p-4 col-9 offset-1 flex-wrap` col-sm-2">
-                                <PkmnCard pkmn={pkmn} reference={reference}/>
+        {pkmns.length > 0? pkmns.map((pkmn, index) => (
+                <div data-testid={pkmn.uniqueId} key={pkmn.uniqueId} className="d-flex flex-column align-items-center justify-content-center bg-light rounded p-4 col-9 offset-1 flex-wrap` col-sm-2">
+                                <PkmnCard pkmn={pkmn} reference={reference} iterationIndex={index}/>
                     {types.map((type,index) =>
                         <div key={index}> 
                                 <CustomBtn classes={'p-2 mt-3'} conditionToDisableBtn={modalState.disableOtherBtns} label={type.label} fn={{fn:setModalProperties, parameters:[type,pkmn]}} />

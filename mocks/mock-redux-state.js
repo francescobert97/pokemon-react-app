@@ -10,10 +10,10 @@ export const mockReduxState = {
       error: null
     },
     team: {
-      team: [{...singlePokemon, uniqueId: '1'}, {...singlePokemon, uniqueId: '2'}, {...singlePokemon, uniqueId: '3'}]
+      team: [{...singlePokemon, uniqueId: '1'}, {...singlePokemon, uniqueId: '2', name:'test2'}, {...singlePokemon, uniqueId: '3', name:'test3' }]
     },
     box: {
-      box: [{...singlePokemon, uniqueId: '4'}, {...singlePokemon, uniqueId: '5'}, {...singlePokemon, uniqueId: '6'}]
+      box: [{...singlePokemon, uniqueId: '4'}, {...singlePokemon, uniqueId: '5', name:'test5'}, {...singlePokemon, uniqueId: '6', name:'test6'}]
     },
     pkmnInformation: {
       pkmnInformation: {...singlePokemon, uniqueId: '12345'}

@@ -7,7 +7,7 @@ describe('PokemonInfoNavbar', () => {
     it('should render without any errors', () => {
         render(
         <MemoryRouter>
-            <PokemonInfoNavbar reference={'/'} />
+            <PokemonInfoNavbar reference={''} />
         </MemoryRouter>
         )
     })
