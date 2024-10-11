@@ -1,6 +1,5 @@
 {
   "name": "test-exercise",
-  "homepage": "https://francescobert97.github.io/pokemon-react-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -54,3 +53,5 @@
     "style-loader": "^4.0.0"
   }
 }
+
+
