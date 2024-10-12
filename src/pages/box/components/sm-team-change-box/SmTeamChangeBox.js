@@ -37,7 +37,7 @@ const SmTeamChangeBox=({method,isVisible, modalStateFn}) => {
                 {teamPkmn.map(pkmn => 
                      <div onClick={() => test(pkmn)}>
                         <p>{pkmn.name}</p> 
-                        <img src={pkmn.sprites.front_default}/>
+                        <img src={pkmn.sprites.front_default} alt="pokemon sprite."/>
                     </div>
                 )}
                 {showModal &&

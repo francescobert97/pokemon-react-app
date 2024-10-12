@@ -16,8 +16,10 @@ import PkmnCatchArea from './pages/pkmnCatchArea/PkmnCatchArea';
 function App() {
   const store = useSelector(state => state.pkmnInformation.pkmnInformation)
   console.log(store)
+  const basename = process.env.NODE_ENV === 'production' ? '/pokemon-react-app' : '/';
+
   return (
-          <Router basename="/pokemon-react-app">
+          <Router basename='/pokemon-react-app'>
             <MyProvider>
               <Navbar />
               <Routes>
@@ -33,9 +35,10 @@ function App() {
                 }/>
               </Routes>
           </MyProvider>
-
         </Router>
   );
 }
 
 export default App;
+
+//  "homepage": "https://francescobert97.github.io/pokemon-react-app/",

@@ -7,7 +7,6 @@ const PokemonInfoNavbar = ({reference}) => {
     const previousPathreference = useRef(reference);
     const [menuOpen, setMenuOpen] = useState(false);
     const openMenu =() => {
-        console.log('trigger')
         setMenuOpen(!menuOpen);
     } 
     return (
