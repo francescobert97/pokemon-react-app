@@ -1,0 +1,7 @@
+<script type="text/javascript">
+    var redirect = location.pathname;
+    if (!redirect.includes("/repository")) {
+      redirect = "/repository" + redirect;
+    }
+    window.location.href = redirect;
+  </script>
