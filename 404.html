@@ -7,10 +7,13 @@
   </head>
   <body>
     <script>
-      // Ricarica il file index.html per far gestire a React tutte le route
-      window.location.replace(
-        window.location.origin + '/pokemon-react-app' 
-      );
+      // Fai il fallback a index.html senza aggiungere ripetutamente il nome del repository
+      const repoName = '/pokemon-react-app';
+      
+      if (!window.location.pathname.startsWith(repoName)) {
+        // Ricarica index.html se la path non include il repoName
+        window.location.replace(window.location.origin + repoName + '/index.html?path=' + window.location.pathname);
+      }
     </script>
   </body>
 </html>
