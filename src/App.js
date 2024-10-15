@@ -11,15 +11,17 @@ import Pokedex from './pages/pokedex/pokedex';
 import ProtectedRoute from './utils/guards/ProtectedRoute';
 import Home from './pages/home/Home';
 import PkmnCatchArea from './pages/pkmnCatchArea/PkmnCatchArea';
+import NotFound from './components/not-found/NotFound';
 
 
 function App() {
+  console.log(window.location.origin + '/pokemon-react-app')
+
   const store = useSelector(state => state.pkmnInformation.pkmnInformation)
   console.log(store)
-  const basename = process.env.NODE_ENV === 'production' ? '/pokemon-react-app' : '/';
-
+   const basename = process.env.NODE_ENV === 'production' ? '/pokemon-react-app' : '/';
   return (
-          <Router basename='/pokemon-react-app'>
+          <Router basename={basename}>
             <MyProvider>
               <Navbar />
               <Routes>
@@ -33,6 +35,7 @@ function App() {
                     <PokemonInformation />
                   </ProtectedRoute> 
                 }/>
+                <Route path='*'  element={<NotFound />} />
               </Routes>
           </MyProvider>
         </Router>

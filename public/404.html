@@ -1,7 +1,19 @@
-<script type="text/javascript">
-    var redirect = location.pathname;
-    if (!redirect.includes("/repository")) {
-      redirect = "/repository" + redirect;
-    }
-    window.location.href = redirect;
-  </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <script>
+      // Fai il fallback a index.html senza aggiungere ripetutamente il nome del repository
+      const repoName = '/pokemon-react-app';
+      
+      if (!window.location.pathname.startsWith(repoName)) {
+        // Ricarica index.html se la path non include il repoName
+        window.location.replace(window.location.origin + repoName + '/index.html?path=' + window.location.pathname);
+      }
+    </script>
+  </body>
+</html>

@@ -3,6 +3,7 @@ export const getAllPokemonNameList = async () => {
 	const endpoint = 'pokemon?limit=100000&offset=0'
 	console.log('ATTIVAZINE!!')
 	const result = await baseApiCall(`https://pokeapi.co/api/v2/${endpoint}`);
+	console.log(result)
 	return result
 
 }

@@ -41,8 +41,8 @@ const Moves = ({moves}) => {
                         <div data-testid={`element-${index}`} onClick={() => updateShowTooltip({tooltipId:move.id, isOpen: !showTooltip.isOpen})} className="d-flex justify-content-between align-items-center bg-light rounded text-dark ">
                             <h2 className="fs-5">{move.name}</h2>
                             <p><span className="fw-bold">Power</span> {move.power? move.power : 'unknown'}</p> 
-                            <p><span className="fw-bold">PP</span> {move.pp}</p> 
-                            <img src={move.sprites[`generation-viii`]['sword-shield'].name_icon} alt="element type icon" style={{width: '85px', height: '30px'}}/>
+                            <p><span className="fw-bold">PP</span> {move.pp}</p>        
+                                <img src={move.sprites[`generation-viii`]['sword-shield'].name_icon} alt="element type icon" style={{width: '85px', height: '30px'}}/>
                         </div>
 
                         {(showTooltip.tooltipId === move.id && showTooltip.isOpen) && <CmTooltip tooltipId={{'data-testid':`tooltip-${index}`}} data={tooltipObj} position={{top: '50%', left: '25%'}} />}

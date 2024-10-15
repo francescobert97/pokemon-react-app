@@ -12,11 +12,14 @@ const Home = () => {
     useEffect(() => {
         preventFetchDataIfTheyreAlreadyStored()
     }, [])
+    console.log(pokemonData)
 
     const preventFetchDataIfTheyreAlreadyStored = () => {
-        const persistedDataResult =  JSON.parse(JSON.parse(localStorage.getItem('persist:root')).fetch).data.results;
+        console.log(localStorage)
+        const persistedDataResult =  JSON.parse(JSON.parse(localStorage.getItem('persist:root')).fetch)?.data?.results;
         console.log(persistedDataResult)
         if(!persistedDataResult || (Array.isArray(persistedDataResult) && persistedDataResult.length <= 0)) dispatch(fetchData(getAllPokemonNameList()))
+        else return;
     }
 
     return (

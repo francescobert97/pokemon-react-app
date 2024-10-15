@@ -7,6 +7,7 @@ const initialState = {
 
  const fetchReducer = (state = initialState, action) => {
     console.log('FETCHREDUCER CHIAMA')
+    console.log(action)
     switch(action.type) {
         case 'FETCH_DATA_REQUEST':
             return { ...state, loading: true, error: null };
