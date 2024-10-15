@@ -20,14 +20,6 @@ export const getSpecificSectionsPkmnInfo = async (url) => {
 	return result
 }
 
-export const getPokemonTypeMoves =  (types) => {
-	return  Promise.all(types.map(async type =>  await baseApiCall(type)));
-}
-
-export const getPokemonTypeMove = async (type) => {
-	console.log('spam')
-	return await baseApiCall(type);
-}
 const baseApiCall = async (url) => {
 	try {
 		const response = await fetch(`${url}`);

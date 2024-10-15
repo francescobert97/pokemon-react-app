@@ -6,12 +6,7 @@ export const downloadData = async (itemUrl, settingFn) => {
    return settingFn(await baseApiCall(itemUrl));
 }
 
-export const downloadData2 = async (itemUrls, nameData,settingFn) => {
-  const result = await Promise.all(itemUrls.map(async itemUrl =>  await baseApiCall(itemUrl[nameData].url)))
-  console.log(result)
-  //settingFn(result)
-  return result
-}
+export const downloadData2 = async (itemUrls, nameData) =>  await Promise.all(itemUrls.map(async itemUrl =>  await baseApiCall(itemUrl[nameData].url).catch(err => ({err}))))
 
 
 export const downloadData3 = async (items, namesData) => {

@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 import CmTooltip from "../../../../components/cm-tooltip/CmTooltip";
-import { downloadData, downloadData2, downloadData3 } from "../../../../utils/downloadData/downloadData";
-import { getPokemonTypeMove, getPokemonTypeMoves } from "../../../../services/pokemon.service";
+import { downloadData2 } from "../../../../utils/downloadData/downloadData";
+import { getPokemonTypeMoves } from "../../../../services/pokemon.service";
+import { imgs } from "../../../../utils/types-map";
 
 
 const Moves = ({moves}) => {
-    const collettingTypes = new Map();
+    
     const [data, setData] = useState([]);
     const [showTooltip, updateShowTooltip] = useState({tooltipId: null, isOpen: false}); 
-
-    const componingObject =  async () => {
-        
-        const fetchedData = await  downloadData2(moves, 'move',setData);
-       fetchedData.map((element) =>collettingTypes.set(element.type.name,element.type.url));
-
-        const movesTypeIcon = await getPokemonTypeMoves(Array.from(collettingTypes.values()));
-        const typeIconMap = new Map(movesTypeIcon.map(type => [type.name, type.sprites]));
-
-       return movesTypeIcon? fetchedData.map(element => ({...element, sprites:{...typeIconMap.get(element.type.name)}})) : [];
+    const collectedTypePicture = async () => {
+        const typeImgs = new Map(Object.entries(imgs).map(d => [d[0], d[1]]))
+        const fetchedData = await  downloadData2(moves, 'move');
+        let dataWithNoErrors = fetchedData.filter(move => !move.err);
+       return dataWithNoErrors.map(move => ({...move, typeIcon:  typeImgs.get(move.type.name)}))
     }
-
     const setCompletedData = async() =>{
-       setData(await componingObject());
+      setData(await collectedTypePicture());
     }
-
     useEffect( () => {
        setCompletedData();
     },[])
@@ -42,7 +36,7 @@ const Moves = ({moves}) => {
                             <h2 className="fs-5">{move.name}</h2>
                             <p><span className="fw-bold">Power</span> {move.power? move.power : 'unknown'}</p> 
                             <p><span className="fw-bold">PP</span> {move.pp}</p>        
-                                <img src={move.sprites[`generation-viii`]['sword-shield'].name_icon} alt="element type icon" style={{width: '85px', height: '30px'}}/>
+                                <img src={move.typeIcon} alt="element type icon" style={{width: '85px', height: '30px'}}/>
                         </div>
 
                         {(showTooltip.tooltipId === move.id && showTooltip.isOpen) && <CmTooltip tooltipId={{'data-testid':`tooltip-${index}`}} data={tooltipObj} position={{top: '50%', left: '25%'}} />}
