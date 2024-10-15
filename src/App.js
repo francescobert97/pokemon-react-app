@@ -15,7 +15,6 @@ import NotFound from './components/not-found/NotFound';
 
 
 function App() {
-  console.log(window.location.origin + '/pokemon-react-app')
 
   const store = useSelector(state => state.pkmnInformation.pkmnInformation)
   console.log(store)
