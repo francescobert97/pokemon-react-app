@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CustomBtn from "../../components/custom-btn/CustomBtn";
 import { useMemoizePkmn } from "../../hooks/useMemoizePkmn";
@@ -6,32 +6,38 @@ import { getSinglePokemonInformation } from "../../services/pokemon.service";
 import capitalizeString from "../../utils/capitalizeString";
 import styles from './pokedex.module.css'
 import {  useHasUnmounted } from "../../hooks/useCustomHook";
+import { imgs, importAll } from "../../utils/types-map";
 
 const Pokedex = () => {
    const pokemonData = useSelector(state => state.fetch.data.results);
    const storedPokemonInformation = useSelector(state => state.pkmnInformation.pkmnInformation);
-   
-
+   const pokemonTypes = imgs()
    const memoizePkmn = useMemoizePkmn();
     const storePkmnInformation = async (pkmnToStore, type) => {
         console.log('non mi triggerò')
         if(storedPokemonInformation.name && pkmnToStore && storedPokemonInformation.name === pkmnToStore.name) return;
-       
-
+    
         if(type === 'memoize' && pkmnToStore.url) {
             const pkmnSelectedInformation = await getSinglePokemonInformation(pkmnToStore.url);
+            if(pkmnSelectedInformation.types) {pkmnSelectedInformation.types.map(type => {
+                type.typeImg = pokemonTypes[type.type.name];
+                return type;
+             } )}
+
             memoizePkmn({type: 'memoize', pkmn:pkmnSelectedInformation})
         }
         else if(type === 'memoize' && !pkmnToStore.url) {
-            console.log('METTIAMO BULBASAUR')
             const pkmnSelectedInformation = await getSinglePokemonInformation(pokemonData[0].url);
+            if(pkmnSelectedInformation.types) {pkmnSelectedInformation.types.map(type => {
+                type.typeImg = pokemonTypes[type.type.name];
+                return type;
+             } )}
             memoizePkmn({type: 'memoize', pkmn:pkmnSelectedInformation})
         }
         else {
             memoizePkmn({type:'delete'})
         }
     }
-    console.log(storedPokemonInformation.name)
     useHasUnmounted(!storedPokemonInformation.name?{fn:storePkmnInformation, params: [{},'memoize'], isEnabledInMounting: true} : {fn:storePkmnInformation, params:[], isEnabledInMounting: false}, '' )
 
    return (
@@ -47,12 +53,17 @@ const Pokedex = () => {
                     ) : <p>No records found!</p>}
                 </div>
 
-                <div className="bg-light col-12 order-1   mx-auto col-md-3  text-dark d-flex flex-column justify-content-start align-items-center p-3">
+                <div className="overflow-hidden bg-light col-12 order-1   mx-auto col-md-3  text-dark d-flex flex-column justify-content-start align-items-center p-3">
 
                     { storedPokemonInformation.name?
                         <div className="h-100 d-flex flex-column align-items-center bg-dark text-light mt-4 rounded" >
                             <h3 className="mt-3">{capitalizeString(storedPokemonInformation.name)}</h3>
-                            <img src={storedPokemonInformation.sprites.front_default} alt="Pokemon sprite"  style={{zoom: '300%'}}/>
+                            <img src={storedPokemonInformation.sprites.front_default} alt="Pokemon sprite"  style={{zoom: '200%'}}/>
+                            <div className="d-flex gap-2">
+                                {storedPokemonInformation.types.map(type => 
+                                  <img src={type.typeImg} alt='type pkmn'key={type.slot} style={{width:'30px', height: '30px'}}/>
+                                )}
+                           </div>
                         </div> :
                         <p>No-information</p>
                     }       

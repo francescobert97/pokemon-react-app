@@ -1,4 +1,4 @@
-const importAll = (r) => {
+export const importAll = (r) => {
     let images = {};
     r.keys().map((item, index) => {
       images[item.replace('./', '').replace(/\.[^/.]+$/, "")] = r(item);
@@ -7,4 +7,4 @@ const importAll = (r) => {
     return images;
   };
 
- export const imgs = importAll(require.context('../assets/types-icons', false, /\.(webp|png|jpe?g|svg)$/));
+ export const imgs = () => importAll(require.context('../assets/types-icons', false, /\.(webp|png|jpe?g|svg)$/));

@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MyProvider } from './context';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './layout/navbar/Navbar';
 import { useSelector } from 'react-redux';
 import PokemonInformation from './pages/pokemonInformation/PokemonInformation';
@@ -15,11 +15,9 @@ import NotFound from './components/not-found/NotFound';
 
 
 function App() {
-
   const store = useSelector(state => state.pkmnInformation.pkmnInformation)
-  console.log(store)
    const basename = process.env.NODE_ENV === 'production' ? '/pokemon-react-app' : '/';
-  return (
+    return (
           <Router basename={basename}>
             <MyProvider>
               <Navbar />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomBtn from "../custom-btn/CustomBtn";
 import CustomModal from "../custom-modal/CustomModal";
 import { useStoringPkmn } from "../../hooks/useStoringPkmn";
@@ -14,7 +14,6 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
         disableOtherBtns: false
     });
     
-
     const pkmnProcessHandler = (pkmn, type) => {
         const hasNextStep = type.modalMsg.find(m => m.hasNextStep)
       return  hasNextStep && hasNextStep.condition() ?       
@@ -41,12 +40,17 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
         
         
         }
+       
+    useEffect(()=> {
+        console.log(localStorage.getItem('currentReference'))
+    },[])
+    
     return (
     <div className="container-fluid">
         <CustomBtn classes={'mb-3 mt-3'} pathLink={'/'}/>
         <div className={`${classes} row`} style={{overflowY:'scroll'}}>
         {pkmns.length > 0? pkmns.map((pkmn, index) => (
-                <div data-testid={pkmn.uniqueId} key={pkmn.uniqueId} className="d-flex flex-column align-items-center justify-content-center bg-light rounded p-4 col-9 offset-1 flex-wrap` col-sm-2">
+                <div data-testid={pkmn.uniqueId} key={pkmn.uniqueId} className="d-flex flex-column align-items-center justify-content-center bg-light rounded p-2 col-9 offset-1 col-sm-2 overflow-hidden">
                                 <PkmnCard pkmn={pkmn} reference={reference} iterationIndex={index}/>
                     {types.map((type,index) =>
                         <div key={index}> 
