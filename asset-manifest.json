@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokemon-react-app/static/css/main.f9b0b2ee.css",
-    "main.js": "/pokemon-react-app/static/js/main.cb2f73a0.js",
+    "main.css": "/pokemon-react-app/static/css/main.81871115.css",
+    "main.js": "/pokemon-react-app/static/js/main.d9a8d90f.js",
     "static/js/453.552e8657.chunk.js": "/pokemon-react-app/static/js/453.552e8657.chunk.js",
     "static/media/pokemon-main-backgroundd.webp": "/pokemon-react-app/static/media/pokemon-main-backgroundd.28f02ce59ec1066d8eb0.webp",
     "static/media/pokemon-main-background.webp": "/pokemon-react-app/static/media/pokemon-main-background.0110501e25b98ec11e95.webp",
@@ -29,12 +29,12 @@
     "static/media/fire.svg": "/pokemon-react-app/static/media/fire.5f5562e5d7b07fee7d7b.svg",
     "static/media/rock.svg": "/pokemon-react-app/static/media/rock.88a9290d3ef8bd4ff3be.svg",
     "static/media/electric.svg": "/pokemon-react-app/static/media/electric.e594ac2ba54856f8eeca.svg",
-    "main.f9b0b2ee.css.map": "/pokemon-react-app/static/css/main.f9b0b2ee.css.map",
-    "main.cb2f73a0.js.map": "/pokemon-react-app/static/js/main.cb2f73a0.js.map",
+    "main.81871115.css.map": "/pokemon-react-app/static/css/main.81871115.css.map",
+    "main.d9a8d90f.js.map": "/pokemon-react-app/static/js/main.d9a8d90f.js.map",
     "453.552e8657.chunk.js.map": "/pokemon-react-app/static/js/453.552e8657.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9b0b2ee.css",
-    "static/js/main.cb2f73a0.js"
+    "static/css/main.81871115.css",
+    "static/js/main.d9a8d90f.js"
   ]
 }
