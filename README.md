@@ -1,21 +1,21 @@
-###About The Project
+### About The Project
 Pokémon App is the ultimate app for Pokémon fans, offering an all-in-one solution to explore, capture, and manage your favorite Pokémon. With access to a complete Pokédex featuring all species, you can discover every detail about each Pokémon—types, abilities, stats, moves, and more. But that’s not all! It allows you to catch any Pokémon and organize them into your personal team or send them to your Pokémon Box for future use. Seamlessly switch between your active team and stored Pokémon, and dive deep into their individual stats and characteristics at the click of a button.
 
 
-##Built With
+## Built With
 - React.js
 - redux
 - Bootstrap
 - Jest
-- 
-###Installation
+  
+### Installation
 
 - Clone the repo
-'''https://github.com/francescobert97/pokemon-react-app.git'''
+```https://github.com/francescobert97/pokemon-react-app.git```
 - Install NPM packages
-'''npm i'''
+```npm i```
 - Run the app using
-'''npm start'''
+```npm start```
 
 
 Runs the app in the development mode.\
