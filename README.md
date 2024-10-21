@@ -32,7 +32,7 @@ If you have a suggestion that would make this better:
 - Push to your branch using git push origin feat-YOUR_FEATURE_NAME.
 - Open a pull request.
   
-###Contact
+### Contact
 Creators: Francesco Bertorotta.
 
 Project Link: on [GitHub](https://github.com/francescobert97/pokemon-react-app).
