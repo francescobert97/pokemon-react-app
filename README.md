@@ -3,10 +3,10 @@ Pokémon App is the ultimate app for Pokémon fans, offering an all-in-one solut
 
 
 ## Built With
-- React.js
-- redux
-- Bootstrap
-- Jest
+- [React.js](https://react.dev/)
+- [redux](https://redux.js.org/))
+- [Bootstrap](https://getbootstrap.com/)
+- [Jest](https://jestjs.io/)
   
 ### Installation
 
