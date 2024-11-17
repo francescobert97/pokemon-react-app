@@ -1,0 +1,24 @@
+.scrollHomeMenu {
+}
+.scrollHomeMenu h1 {
+
+}
+.scrollHomeMenu > div > img {
+    top:7%;
+    left: 0;
+}
+
+img {
+
+}
+.ring img {
+    animation: circle-rotation 20s linear infinite;
+}
+@keyframes circle-rotation {
+    from {
+    transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(365deg);
+    }
+}

@@ -15,7 +15,7 @@ const Abilities = ({abilities}) => {
     },[])
 
     return (
-        <div className="bg-dark p-3 rounded mt-5">
+        <div className="gradient-bg p-3 rounded">
             {abilities && fetchedAbilitiesData.map(ability => (
                 <div key={ability.id} className="d-flex flex-column align-items-center justify-content-center">
 

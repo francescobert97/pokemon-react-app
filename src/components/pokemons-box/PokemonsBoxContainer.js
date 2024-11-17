@@ -40,10 +40,6 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
         
         
         }
-       
-    useEffect(()=> {
-        console.log(localStorage.getItem('currentReference'))
-    },[])
     
     return (
     <div className="container-fluid">

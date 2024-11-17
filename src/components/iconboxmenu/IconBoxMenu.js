@@ -1,6 +1,6 @@
 import React from "react";
 import CustomBtn from "../custom-btn/CustomBtn";
-
+import styles from './IconBoxMenu.module.css'
 const importAll = (r) => {
     let images = {};
     r.keys().map((item, index) => {
@@ -15,7 +15,7 @@ const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}
  const image = Object.entries(imgs).find(imgLink => imgLink[0] === iconName)
 
  return (     
-    <div className={`${classes}`}>
+    <div className={`${styles.iconBoxMenu} ${classes}`}>
         {
             children? children : <CustomBtn pathLink={pathLink} classes={'p-2'} label={btnLabel} />
         }

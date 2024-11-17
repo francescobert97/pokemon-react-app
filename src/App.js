@@ -20,7 +20,6 @@ function App() {
     return (
           <Router basename={basename}>
             <MyProvider>
-              <Navbar />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/team/*" element={<Team />}/>                  

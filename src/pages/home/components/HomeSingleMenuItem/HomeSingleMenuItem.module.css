@@ -1,0 +1,32 @@
+.scrollHomeMenu {
+}
+.scrollHomeMenu h1 {
+
+}
+.contentInfoBox img:nth-child(1) {
+    width: 100%;
+    max-height: 700px;
+}
+.scrollHomeMenu button {
+    max-width: 400px;
+    max-height: 150px;
+}
+.scrollHomeMenu:nth-child(1) div {
+    top:15%;
+}
+img {
+
+}
+.ring img {
+    animation: circle-rotation 20s linear infinite;
+}
+@keyframes circle-rotation {
+    from {
+    transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(365deg);
+    }
+}
+
+/*<img src={customBox} />*/

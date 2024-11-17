@@ -23,7 +23,7 @@ const Moves = ({moves}) => {
     },[])
 
     return (
-    <div className="d-flex flex-column rounded gap-2 w-100 bg-dark vh-100 mt-3 p-2 " style={{overflowY: 'scroll'}}>
+    <div className="d-flex flex-column rounded gap-2 w-100 bg-dark h-100 no-bar   p-2 " style={{overflowY: 'scroll'}}>
         {data.length > 0? data?.map((move,index) => {
             const moveDescription = move.flavor_text_entries.find(text => text.language.name === 'en')?.flavor_text || 'no description available'
             const tooltipObj = {
@@ -32,7 +32,7 @@ const Moves = ({moves}) => {
             }
         return (
                     <React.Fragment  key={move.id}>
-                        <div data-testid={`element-${index}`} onClick={() => updateShowTooltip({tooltipId:move.id, isOpen: !showTooltip.isOpen})} className="d-flex justify-content-between align-items-center bg-light rounded text-dark ">
+                        <div data-testid={`element-${index}`} onClick={() => updateShowTooltip({tooltipId:move.id, isOpen: !showTooltip.isOpen})} className="d-flex justify-content-between bg-light align-items-center rounded text-dark ">
                             <h2 className="fs-5">{move.name}</h2>
                             <p><span className="fw-bold">Power</span> {move.power? move.power : 'unknown'}</p> 
                             <p><span className="fw-bold">PP</span> {move.pp}</p>        

@@ -1,11 +1,14 @@
 :root {
-    --gradient-color: linear-gradient(90deg, rgba(157,255,0,1) 0%, rgba(0,255,233,1) 41%, rgba(255,237,0,1) 100%);
+    --gradient-color: linear-gradient(90deg, rgb(157, 255, 0) 0%, rgb(0, 255, 233) 41%, rgb(255, 237, 0) 100%);
 }
 body {
-    background: url('./assets/pokemon-main-background.webp') no-repeat;
+   /* background: url('./assets/pokemon-main-background.webp') no-repeat;*/
+     background: url('./assets/7957748.jpg') no-repeat;
+
+   /*background: black !important;*/
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Se vuoi un effetto fisso */
+    background-attachment: fixed;
 
 }
 
@@ -15,8 +18,27 @@ body {
     text-decoration: none;
     
 }
-
+.no-bar::-webkit-scrollbar {
+    display: none;
+}
 
 .flex-1 {
     flex: 1;
+}
+
+.custom-text-shadow {
+    text-shadow: 1px -1px 16px rgba(35,220,178,0.87);
+}
+
+.gradient-bg {
+   background: var(--gradient-color);
+}
+
+.item-bar-bg {
+    background: url('./assets/item-bar.webp') no-repeat;
+    object-fit: cover;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
 }

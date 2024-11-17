@@ -10,7 +10,7 @@ export const getAllPokemonNameList = async () => {
 
 export const getSinglePokemonInformation = async (pokemonUrl) => {
 	const result = await baseApiCall(pokemonUrl)
-	result.uniqueId = Math.floor(Math.random()* 10000) 
+	//result.uniqueId = Math.floor(Math.random()* 10000) 
 	return result
 
 }

@@ -18,9 +18,9 @@ const PokemonInformation = () => {
 
     return (
         <div className="container-fluid text-light vh-100">
-            <div className="row">
+            <div className="row h-100">
                 <PokemonInfoNavbar reference={location.state}/>
-                <div className="w-100 d-flex justify-content-center align-items-center">
+                <div className="w-100 h-100 d-flex justify-content-center align-items-center flex-grow-1">
                     <Routes>
                         <Route path="/" element={<Navigate to={"abilities"} replace />} />
                         <Route path="/abilities" element={<Abilities abilities={pkmn.abilities}/>} key='abilities' />

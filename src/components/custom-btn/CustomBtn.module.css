@@ -4,15 +4,27 @@
     -webkit-box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
     -moz-box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
     box-shadow: -7px 3px 29px -4px rgb(255, 255, 255);
+
+}
+#customBtn span {
+  z-index: 100;
 }
 
+
+#customBtn img {
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 140px;
+    
+}
 .infoNavbar {
     font-size: 1em;
 }
 
 
 
-@media (max-width: 768px) { /* md breakpoint */
+@media (max-width: 768px) { 
   .infoNavbar {
     font-size: 0.6em;
     

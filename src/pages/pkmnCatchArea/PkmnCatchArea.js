@@ -17,9 +17,11 @@ const PkmnCatchArea = () => {
         storingPkmn({type:operation, pkmn:randomPkmn})
         
     }
-    const getRandomPkmn = (pokemonsArray) => {
+    const getRandomPkmn = async (pokemonsArray) => {
         const rndmNumber = Math.floor(Math.random() * pokemonData.results.length)
-        return getSinglePokemonInformation(pokemonsArray.results[rndmNumber].url)
+        const pokemon = await getSinglePokemonInformation(pokemonsArray.results[rndmNumber].url)
+        pokemon.uniqueId = Math.floor(Math.random()* 10000) 
+        return pokemon
     }
     const  catchPokemon = async () => {
         const AllPokemon = pokemonData

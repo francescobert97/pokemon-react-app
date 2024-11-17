@@ -1,0 +1,9 @@
+.iconBoxMenu {
+    background: url('../../assets/chrome_gradient_background.jpg') center;
+    background-size: cover;
+    box-shadow: 2px 2px 10px rgba(192, 192, 192, 0.6), 0 0 15px rgba(211, 211, 211, 0.4);
+        border: 2px solid silver;
+}
+
+.iconBoxMenu:first-child {
+}
