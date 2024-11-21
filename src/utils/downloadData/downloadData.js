@@ -7,21 +7,3 @@ export const downloadData = async (itemUrl, settingFn) => {
 }
 
 export const downloadData2 = async (itemUrls, nameData) =>  await Promise.all(itemUrls.map(async itemUrl =>  await baseApiCall(itemUrl[nameData].url).catch(err => ({err}))))
-
-
-export const downloadData3 = async (items, namesData) => {
-    const accData = []
-    let count = 0
-    console.log(namesData)
-  console.log(items)
-                  let memoize=items
-                  while(count < namesData.length) {
-                    console.log(count)
-                    memoize = await Promise.all(memoize.map(async item => await baseApiCall(item[namesData[count]].url)))
-                    accData.push(memoize);
-                    count++
-                  }
-        return accData
-              
-           
-}

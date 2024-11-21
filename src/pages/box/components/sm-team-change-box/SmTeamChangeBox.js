@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import CustomBtn from "../../../../components/custom-btn/CustomBtn";
 import CustomModal from "../../../../components/custom-modal/CustomModal";
-import { useStoringPkmn } from "../../../../hooks/useStoringPkmn";
+import { useStoringPkmn } from "../../../../hooks/useStoringPkmn/useStoringPkmn";
 
 const SmTeamChangeBox=({method,isVisible, modalStateFn}) => {
     const teamPkmn = useSelector(state => state.team.team)

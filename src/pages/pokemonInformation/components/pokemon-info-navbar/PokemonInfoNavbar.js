@@ -3,7 +3,7 @@ import CustomBtn from "../../../../components/custom-btn/CustomBtn";
 import stylesCustomBtn from '../../../../components/custom-btn/CustomBtn.module.css'
 import Hamburger from "../hamburger/Hamburger";
 import styles from './pokemoninfonavbar.module.css';
-import { useHasUnmounted } from "../../../../hooks/useCustomHook";
+import { useHasUnmounted } from "../../../../hooks/useHasUnmounted/useHasUnmounted";
 const PokemonInfoNavbar = () => { 
     const [menuOpen, setMenuOpen] = useState(false);
     const openMenu =() => {
@@ -16,9 +16,9 @@ const PokemonInfoNavbar = () => {
        useHasUnmounted({fn:cancelReference, params:[]}, 'no-dispatch')
 
     return (
-        <div id={`${styles.infoNavbar}`} className=" gradient-bg p-4">
+        <div id={`${styles.infoNavbar}`} className="gradient-bg  p-md-5">
                 <Hamburger openMenu={openMenu} />
-            <ul className={` ${menuOpen? 'd-flex' : 'd-none'} d-md-flex justify-content-around col-12  p-4 w-100`}>
+            <ul className={` ${menuOpen? 'd-flex' : 'd-none'} d-md-flex justify-content-around p-4 p-md-0 m-0 col-12`}>
      
                 <li><CustomBtn classes={`${stylesCustomBtn.infoNavbar}`} pathLink={`/${localStorage.getItem('currentReference')}`} label={'Close'} /></li>
                 <li><CustomBtn fn={{fn:openMenu, parameters:[]}} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'abilities'} label={'abilities'} /></li>

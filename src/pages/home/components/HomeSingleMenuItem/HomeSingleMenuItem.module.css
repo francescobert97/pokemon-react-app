@@ -1,25 +1,35 @@
 .scrollHomeMenu {
 }
-.scrollHomeMenu h1 {
 
+
+.scrollHomeMenu > div > img {
+   max-width: 310px;
+   max-height: 310px;
 }
 .contentInfoBox img:nth-child(1) {
-    width: 100%;
-    max-height: 700px;
+    min-width: 420px;
+    max-width: 420px;
+    height: clamp(300px 350px 350px);
 }
-.scrollHomeMenu button {
-    max-width: 400px;
-    max-height: 150px;
-}
-.scrollHomeMenu:nth-child(1) div {
-    top:15%;
-}
-img {
 
+.contentInfoBox div:first-of-type {
+    top: 21%;
+    left: 18%;
 }
+
+.contentInfoBox div:first-of-type p{
+    font-size: 0.85em;
+}
+
+.scrollHomeMenu button {
+    max-width: 250px;
+    max-height: 120px;
+}
+
 .ring img {
     animation: circle-rotation 20s linear infinite;
 }
+
 @keyframes circle-rotation {
     from {
     transform: rotate(0deg)
@@ -29,4 +39,44 @@ img {
     }
 }
 
-/*<img src={customBox} />*/
+@media (max-width: 1200px) {
+   
+
+ 
+}
+
+@media (max-width: 956px) {
+    .contentInfoBox img:nth-child(1) {
+        min-width: 320px;
+        max-width: 320px;
+        height: clamp(300px 350px 350px);
+        }
+    .contentInfoBox div:first-of-type {
+        top: 10%;
+        left: 15%;
+    }
+    .contentInfoBox div:first-of-type p{
+        font-size: 0.7em;
+    }
+    .scrollHomeMenu > div > img {
+        max-width: 250px;
+        max-height: 250px;
+     }
+
+}
+
+@media (max-width: 768px) {
+    .contentInfoBox img:nth-child(1) {
+        min-width: 320px;
+    }
+    .contentInfoBox div:first-of-type {
+        top: 28%;
+        left: 30%;
+    }
+    .scrollHomeMenu > div > img {
+        max-width: 250px;
+        max-height: 250px;
+     }
+
+}
+

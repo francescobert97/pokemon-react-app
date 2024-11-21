@@ -8,7 +8,7 @@ import rootReducer from './reducers/reducers';
 
 const persistConfig = {
     key: 'root',
-    storage    // Il tipo di storage (localStorage o sessionStorage)
+    storage 
   };
 
   const persistedReducer = persistReducer(persistConfig, rootReducer);

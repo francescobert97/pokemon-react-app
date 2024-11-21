@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { useHasUnmounted } from "../../hooks/useCustomHook";
-import { useMemoizePkmn } from "../../hooks/useMemoizePkmn";
-import Abilities from "./components/Abilities";
+import { useHasUnmounted } from "../../hooks/useHasUnmounted/useHasUnmounted";
+import { useMemoizePkmn } from "../../hooks/useMemoizePkmn/useMemoizePkmn";
+import Abilities from "./components/abilities/Abilities";
 import PokemonInfoNavbar from "./components/pokemon-info-navbar/PokemonInfoNavbar";
 import Sprites from "./components/sprites/Sprites";
-import Stats from "./components/Stats";
+import Stats from "./components/stats/Stats";
 import Moves from "./components/moves/Moves";
+import imgBox from '../../assets/pokemon-window.webp'
 
 
 const PokemonInformation = () => {
@@ -17,23 +18,20 @@ const PokemonInformation = () => {
     useHasUnmounted({fn: () => memoizePkmn({type:'delete'})}, 'no-dispatch');
 
     return (
-        <div className="container-fluid text-light vh-100">
-            <div className="row h-100">
+      
+            <div className="h-100 d-flex flex-column">
                 <PokemonInfoNavbar reference={location.state}/>
-                <div className="w-100 h-100 d-flex justify-content-center align-items-center flex-grow-1">
+                <div className="w-100 d-flex justify-content-center align-items-center flex-grow-1">
                     <Routes>
                         <Route path="/" element={<Navigate to={"abilities"} replace />} />
-                        <Route path="/abilities" element={<Abilities abilities={pkmn.abilities}/>} key='abilities' />
-                        <Route path="stats" element={<Stats stats={pkmn.stats}/>} key='stats' />
-                        <Route path="moves" element={<Moves moves={pkmn.moves} key='moves'/>} />
-                        <Route path="sprites" element={<Sprites sprites={pkmn.sprites}/>} key='sprites' />
+                        <Route path="/abilities" element={<Abilities sectionBg={imgBox} abilities={pkmn.abilities}/>} key='abilities' />
+                        <Route path="stats" element={<Stats sectionBg={imgBox} stats={pkmn.stats}/>} key='stats' />
+                        <Route path="moves" element={<Moves sectionBg={imgBox} moves={pkmn.moves} key='moves'/>} />
+                        <Route path="sprites" element={<Sprites sectionBg={imgBox} sprites={pkmn.sprites}/>} key='sprites' />
                     </Routes>
                 </div>
             </div>
-    
 
-
-        </div>
     
     )
 }

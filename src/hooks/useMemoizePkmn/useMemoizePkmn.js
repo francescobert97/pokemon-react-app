@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { deleteMemoizedPkmnInformation, memoizePkmnInformation } from "../redux/actions/addPkmn.action"
+import { deleteMemoizedPkmnInformation, memoizePkmnInformation } from "../../redux/actions/addPkmn.action"
 
 
 

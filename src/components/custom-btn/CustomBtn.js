@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from './CustomBtn.module.css'
-import capitalizeString from '../../utils/capitalizeString'
+import capitalizeString from '../../utils/capitalizeString/capitalizeString'
 import customBtnImg from '../../assets/custom-btn.webp'
 const CustomBtn = ({label='close', classes, pathLink, fn, conditionToDisableBtn = false}) => {
     const executePropsFn = () => {

@@ -14,7 +14,7 @@ const boxPkmns = useSelector(state => state.box.box);
    
     return (
       
-        <PokemonsBoxContainer  childPropsNeeded={true}  pkmns={boxPkmns} types={pkmnModals}  classes={'bg-dark text-light gap-4 vh-100 align-items-start mx-auto p-5'} reference="box" noPkmncustomMessage={'box is empty.'}>
+        <PokemonsBoxContainer  childPropsNeeded={true}  pkmns={boxPkmns} types={pkmnModals}  classes={' align-items-start'} reference="box" noPkmncustomMessage={'box is empty.'}>
           <SmTeamChangeBox />
         </PokemonsBoxContainer>
   )

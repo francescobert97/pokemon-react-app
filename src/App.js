@@ -1,8 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MyProvider } from './context';
-import React, { useEffect } from 'react';
-import Navbar from './layout/navbar/Navbar';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import PokemonInformation from './pages/pokemonInformation/PokemonInformation';
 import Team from './pages/team/Team';
@@ -20,6 +19,8 @@ function App() {
     return (
           <Router basename={basename}>
             <MyProvider>
+              <div className='container-fluid p-0  h-100'>
+                <div className='row g-0 h-100'>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/team/*" element={<Team />}/>                  
@@ -33,6 +34,8 @@ function App() {
                 }/>
                 <Route path='*'  element={<NotFound />} />
               </Routes>
+              </div>
+              </div>
           </MyProvider>
         </Router>
   );

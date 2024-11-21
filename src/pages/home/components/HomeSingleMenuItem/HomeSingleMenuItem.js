@@ -7,42 +7,56 @@ import homeBtn from '../../../../assets/homeButton.png'
 import trainer from '../../../../assets/pokemon-trainer.webp'
 import charizard from '../../../../assets/Charizard.png'
 import customBox from '../../../../assets/Progetto senza titolo (7)-Photoroom.webp';
+import customSmallBox from '../../../../assets/Progetto senza titolo (1)-Photoroom-Photoroom.webp';
+
 import { Link } from "react-router-dom";
 
 const HomeSingleMenuItem = () => {
     const [scrollIndex, setScrollIndex] = useState(0);
+    const [isResized, setIsResized] = useState(true);
     const scrollDivRef = useRef(null);
     const scroller = useRef(null);
     const homeContents = [
         {
             bg: fica,
             nameSection: 'POKEDEX',
+            description: 'Explore the world of Pokémon! Dive into a complete Pokédex filled with detailed informations and evolutionary lines for every Pokémon.',
             path: '/pokedex'
         },
         {
             bg: charizard,
             nameSection: 'TEAM',
+            description: 'Build your ultimate Pokémon dream team! Strategize and assemble the perfect lineup for battles and adventures.',
             path: '/team'
         },
         {
             bg: fica2,
             nameSection: 'BOX',
+            description: 'Organize and manage your Pokémon collection. Store, view, and move your Pokémon with ease in the Pokémon Box.',
             path: '/box'
         },
         {
             bg: trainer,
             nameSection: 'CATCH POKEMON',
+            description: 'Venture into the wild and catch new Pokémon! Test your skills and expand your roster in the thrilling Capture Zone.',
             path: '/pkmnCatchArea'
         },
     ]
 
     useEffect(() =>{
         scrollDivRef.current.addEventListener('wheel', switchContent)
+        window.addEventListener('resize', () => (window.innerWidth > 768? setIsResized(true) : setIsResized(false)))
 
     }, [])
 
     const switchContent = (e) => {
+        console.log('onresize trigger')
         const delta = e.deltaY
+
+        if(scroller.current) {
+            return;
+        }
+
         if(!scroller.current) {
             scroller.current = setTimeout(() => {
                 scroller.current = null
@@ -50,31 +64,33 @@ const HomeSingleMenuItem = () => {
                 setScrollIndex(prevState => (prevState +1) % homeContents.length)
                 :
                 setScrollIndex(prevState => prevState > 0? prevState -1 : homeContents.length-1)
-            }, 500)
+            }, 1000)
         }
     }
 
     return (
-        <div ref={scrollDivRef} className={`${styles.scrollHomeMenu} no-bar w-100  text-light overflow-scroll d-flex align-items-center justify-content-between`}>   
-            <div className="position-relative mb-5">
-                <div className={`${styles.ring}`} ><img src={ring} style={{width: '500px', height: '500px'}} alt="ring-image" /></div>
-                <img className="position-absolute" src={homeContents[scrollIndex].bg} style={{left: '18%', top: '8%',  maxWidth: '350px',maxHeight: '350px'}} alt="icon home menù"/>
+        <div ref={scrollDivRef} className={`${styles.scrollHomeMenu} no-bar w-100  d-flex flex-column flex-md-row align-items-center justify-content-evenly`}>   
+            <div className="position-relative">
+                <div className={`${styles.ring}`}><img className="w-100 h-100" src={ring} alt="ring-image" /></div>
+                <img className="absolute-center-element" src={homeContents[scrollIndex].bg}  alt="icon home menù"/>
             </div>
         
-            <div className={`${styles.contentInfoBox} position-relative p-2 text-dark`}>
-                <img src={customBox} />
-                <div className=" position-absolute d-flex flex-column "  style={{left: '10%', top: '10%'}}>
-                    <h1 className="custom-text-shadow ">{homeContents[scrollIndex]?.nameSection}</h1>
-                    <p className="custom-text-shadow p-3 rounded">lorem ipsum dolor sit amet caz d cul osajdosfdjkwerofjrewojfreofreofjreofjreofj5rojferojforejfoerjfojojefrojrfefreopjrfedoeprfojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+            <div className={`${styles.contentInfoBox} d-flex flex-column flex-md-row position-relative gap-5 text-dark`}>
+                <img src={isResized? customBox : customSmallBox} alt="custom box"/>
+                <div className="position-absolute w-25 d-flex flex-column ">
+                    <h1 className="custom-text-shadow fs-l-1 fs-4 fs-md-3 mb-l-3">{homeContents[scrollIndex]?.nameSection}</h1>
+                    {isResized && <p className=" custom-text-shadow ">{homeContents[scrollIndex]?.description}</p>}
                 </div>
-            </div>
 
-            <button className="btn position-relative align-self-end me-5 mb-5">
+                <button className="btn  position-relative align-self-md-end  me-2">
                         <Link to={homeContents[scrollIndex].path} >
-                            <h2 className="position-absolute  fs-1 fw-bold" style={{left: '50%', top: '30%'}}>GO!</h2>
-                            <img src={homeBtn} className="" alt="button image-wrap"/>
+                            <p className=" absolute-center-element fs-3 fw-bold" >GO!</p>
+                            <img src={homeBtn} className="w-100" alt="button image-wrap"/>
                         </Link>
                     </button>
+            </div>
+
+            
         </div>
     )
 }

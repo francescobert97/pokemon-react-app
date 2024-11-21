@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { useDispatch } from "react-redux";
 
 export const useHasUnmounted = (effect,type ) => {
+    console.log(type)
     const hasUnmounted = useRef(false);
     const dispatch = useDispatch()
     

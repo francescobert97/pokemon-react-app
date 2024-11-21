@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addPkmnToBox, addPkmnToTeam, DeletePkmnFromBox, deletePkmnFromTeam } from "../redux/actions/addPkmn.action";
+import { addPkmnToBox, addPkmnToTeam, DeletePkmnFromBox, deletePkmnFromTeam } from "../../redux/actions/addPkmn.action";
 
 export const useStoringPkmn = () => {
     const teamPkmns = useSelector(state => state.team.team)

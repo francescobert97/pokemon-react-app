@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CustomBtn from "../../components/custom-btn/CustomBtn";
-import { useStoringPkmn } from "../../hooks/useStoringPkmn";
+import { useStoringPkmn } from "../../hooks/useStoringPkmn/useStoringPkmn";
 import fieldPoke from '../../assets/field-poke.webp'
 import { useSelector } from "react-redux";
 import { getSinglePokemonInformation } from "../../services/pokemon.service";
+import Spinner from "../../components/spinner/Spinner";
 
 const PkmnCatchArea = () => {
     const teamStore = useSelector(state => state.team.team);
@@ -42,7 +43,7 @@ const PkmnCatchArea = () => {
                     <CustomBtn label={'Escape'} pathLink={'/'} classes={''}  fn={{fn:sendPokemon, parameters: ['escape']}}/>
 
                 </div>
-             </div> : <div>No pkmn.</div>}
+             </div> : <Spinner />}
         </>
     )
 }

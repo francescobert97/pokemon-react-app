@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../../redux/thunk";
-
-
 import styles from './Home.module.css'
 import HomeSingleMenuItem from "./components/HomeSingleMenuItem/HomeSingleMenuItem";
 
@@ -10,11 +8,12 @@ import HomeSingleMenuItem from "./components/HomeSingleMenuItem/HomeSingleMenuIt
 const Home = () => {
     const dispatch = useDispatch();
     useEffect(() => {
-        fetchData(dispatch)
+        dispatch(fetchData())
+
     }, [])
 
     return (
-        <div className="w-100 vh-100  row align-items-center">
+        <div className="d-flex align-items-center">
             <HomeSingleMenuItem />
         </div>
     )
