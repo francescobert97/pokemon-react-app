@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/pokemon-react-app/static/css/main.012be073.css",
-    "main.js": "/pokemon-react-app/static/js/main.b38bea17.js",
+    "main.css": "/pokemon-react-app/static/css/main.eac96a25.css",
+    "main.js": "/pokemon-react-app/static/js/main.e6aafb2a.js",
     "static/js/453.552e8657.chunk.js": "/pokemon-react-app/static/js/453.552e8657.chunk.js",
-    "static/media/background.jpg": "/pokemon-react-app/static/media/background.39fb1da6575c8b5c0eb3.jpg",
-    "static/media/Charizard.png": "/pokemon-react-app/static/media/Charizard.ea0ce7bc515383492499.png",
-    "static/media/pokemonTrainer.webp": "/pokemon-react-app/static/media/pokemonTrainer.16fea4013f01a6bd4a9a.webp",
-    "static/media/ring.png": "/pokemon-react-app/static/media/ring.0f814623e38d8f210b1f.png",
-    "static/media/homeButton.png": "/pokemon-react-app/static/media/homeButton.ee05611e3517a1630c68.png",
+    "static/media/background.webp": "/pokemon-react-app/static/media/background.9aaa09a00cdf09724f35.webp",
+    "static/media/pokemonTrainer.webp": "/pokemon-react-app/static/media/pokemonTrainer.0a69f22a2bebcdc95c4a.webp",
+    "static/media/Charizard.webp": "/pokemon-react-app/static/media/Charizard.69d7b65092a848e9bde4.webp",
     "static/media/pokemonTitlebarLarge.webp": "/pokemon-react-app/static/media/pokemonTitlebarLarge.7965c32282ec9d1e1064.webp",
     "static/media/field-poke.webp": "/pokemon-react-app/static/media/field-poke.e9e695e282863eb81de9.webp",
     "static/media/pngwing.webp": "/pokemon-react-app/static/media/pngwing.5145436eaf800509e23a.webp",
     "static/media/pokedex.webp": "/pokemon-react-app/static/media/pokedex.bf1b281cfe369608bc33.webp",
     "static/media/settings-gear-icon.png": "/pokemon-react-app/static/media/settings-gear-icon.c8417003b634179b69e7.png",
+    "static/media/ring.webp": "/pokemon-react-app/static/media/ring.cfbb0a467431bfea4ec5.webp",
     "static/media/pokemonTitlebar.webp": "/pokemon-react-app/static/media/pokemonTitlebar.b4202e97b4d689a6b418.webp",
     "static/media/pokemon-window.webp": "/pokemon-react-app/static/media/pokemon-window.dffd60fc07849b8358aa.webp",
+    "static/media/homeButton.webp": "/pokemon-react-app/static/media/homeButton.7234d84d27c98b4acbbf.webp",
     "static/media/fighting.svg": "/pokemon-react-app/static/media/fighting.b80053d451422c6ae76f.svg",
     "static/media/ground.svg": "/pokemon-react-app/static/media/ground.5adf02202f4bae2e3903.svg",
     "static/media/dragon.svg": "/pokemon-react-app/static/media/dragon.b9193ae90cb5b40d04a3.svg",
@@ -37,12 +37,12 @@
     "static/media/rock.svg": "/pokemon-react-app/static/media/rock.88a9290d3ef8bd4ff3be.svg",
     "static/media/electric.svg": "/pokemon-react-app/static/media/electric.e594ac2ba54856f8eeca.svg",
     "static/media/loading.svg": "/pokemon-react-app/static/media/loading.9d64573212432d2eb2dc649e421583c5.svg",
-    "main.012be073.css.map": "/pokemon-react-app/static/css/main.012be073.css.map",
-    "main.b38bea17.js.map": "/pokemon-react-app/static/js/main.b38bea17.js.map",
+    "main.eac96a25.css.map": "/pokemon-react-app/static/css/main.eac96a25.css.map",
+    "main.e6aafb2a.js.map": "/pokemon-react-app/static/js/main.e6aafb2a.js.map",
     "453.552e8657.chunk.js.map": "/pokemon-react-app/static/js/453.552e8657.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.012be073.css",
-    "static/js/main.b38bea17.js"
+    "static/css/main.eac96a25.css",
+    "static/js/main.e6aafb2a.js"
   ]
 }
