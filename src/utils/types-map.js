@@ -7,4 +7,6 @@ export const importAll = (r) => {
     return images;
   };
 
- export const imgs = () => importAll(require.context('../assets/types-icons', false, /\.(webp|png|jpe?g|svg)$/));
+ export const typeIconImgs = () => importAll(require.context('../assets/icons/types-icons', false, /\.(webp|png|jpe?g|svg)$/));
+ export const layoutImgs = importAll(require.context('../assets/template', false, /\.(webp|png|jpe?g|svg)$/));
+

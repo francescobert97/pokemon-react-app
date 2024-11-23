@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CustomBtn from "../../components/custom-btn/CustomBtn";
 import { useStoringPkmn } from "../../hooks/useStoringPkmn/useStoringPkmn";
-import fieldPoke from '../../assets/field-poke.webp'
+import fieldPoke from '../../assets/template/field-poke.webp'
 import { useSelector } from "react-redux";
 import { getSinglePokemonInformation } from "../../services/pokemon.service";
 import Spinner from "../../components/spinner/Spinner";
@@ -33,7 +33,7 @@ const PkmnCatchArea = () => {
     }, [])
     return (
         <>
-        { randomPkmn? <div className=" w-100 h-100 rounded d-flex flex-column justify-content-center align-items-center" style={{background:  `url(${fieldPoke})`, backgroundSize: 'cover'}}>
+        { randomPkmn? <div className=" w-100 h-50 align-self-center rounded d-flex flex-column justify-content-center align-items-center" style={{background:  `url(${fieldPoke})`, backgroundSize: 'cover'}}>
               <p className="fs-4 bg-light rounded p-2 mt-5">Congratulations! you have got <span className="fw-bold fs-3">{randomPkmn.name}</span></p>
                 <img className="h-100 w-100" alt="pokemon sprite" src={randomPkmn.sprites.front_default}  style={{maxWidth: '350px', minHeight: '300px'}}/>
 

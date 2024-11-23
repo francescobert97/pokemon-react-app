@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CustomBtn from "../custom-btn/CustomBtn";
 import CustomModal from "../custom-modal/CustomModal";
 import { useStoringPkmn } from "../../hooks/useStoringPkmn/useStoringPkmn";
-import settings from '../../assets/settings-gear-icon.png'
+import settings from '../../assets/icons/settings-gear-icon.png'
 import PkmnCard from "../Pkmn-card/PkmnCard";
 import styles from './PokemonsBoxContainer.module.css'
 

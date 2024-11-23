@@ -6,14 +6,14 @@ import { getSinglePokemonInformation } from "../../services/pokemon.service";
 import capitalizeString from "../../utils/capitalizeString/capitalizeString";
 import styles from './pokedex.module.css'
 import {  useHasUnmounted } from "../../hooks/useHasUnmounted/useHasUnmounted";
-import { imgs } from "../../utils/types-map";
-import itemBar from '../../assets/item-bar.webp';
+import { typeIconImgs } from "../../utils/types-map";
+import itemBar from '../../assets/template/item-bar.webp';
 import { downloadData } from "../../utils/downloadData/downloadData";
 import Spinner from '../../components/spinner/Spinner'
 const Pokedex = () => {
    const pokemonData = useSelector(state => state.fetch.data?.results);
    const storedPokemonInformation = useSelector(state => state.pkmnInformation.pkmnInformation);
-   const pokemonTypes = imgs()
+   const pokemonTypes = typeIconImgs()
    const memoizePkmn = useMemoizePkmn();
     const storePkmnInformation = async (pkmnToStore, type) => {
 

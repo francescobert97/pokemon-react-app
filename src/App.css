@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 body, html {
-    background: url('./assets/7957748.jpg') no-repeat;
+    background: url('./assets/template/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,7 +38,7 @@ body, html {
 }
 
 .item-bar-bg {
-    background: url('./assets/item-bar.webp') no-repeat;
+    background: url('./assets/template/item-bar.webp') no-repeat;
     object-fit: cover;
 }
 

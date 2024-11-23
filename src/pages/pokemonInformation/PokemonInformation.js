@@ -8,7 +8,7 @@ import PokemonInfoNavbar from "./components/pokemon-info-navbar/PokemonInfoNavba
 import Sprites from "./components/sprites/Sprites";
 import Stats from "./components/stats/Stats";
 import Moves from "./components/moves/Moves";
-import imgBox from '../../assets/pokemon-window.webp'
+import imgBox from '../../assets/template/pokemon-window.webp'
 
 
 const PokemonInformation = () => {

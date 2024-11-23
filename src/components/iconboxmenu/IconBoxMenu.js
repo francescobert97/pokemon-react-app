@@ -1,23 +1,15 @@
 import React from "react";
-import CustomBtn from "../custom-btn/CustomBtn";
 import styles from './IconBoxMenu.module.css'
-const importAll = (r) => {
-    let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace('./', '').replace(/\.[^/.]+$/, "")] = r(item);
-      return '';
-    });
-    return images;
-  };
+import { layoutImgs } from "../../utils/types-map";
 
-  const imgs = importAll(require.context('../../assets', false, /\.(webp|png|jpe?g|svg)$/));
-const IconBoxMenu = ({classes, btnLabel, dimension, pathLink,iconName, children}) => {
- const image = Object.entries(imgs).find(imgLink => imgLink[0] === iconName)
+
+const IconBoxMenu = ({classes, dimension,iconName, children}) => {
+ const image = Object.entries(layoutImgs).find(imgLink => imgLink[0] === iconName)
 
  return (     
     <div className={`${styles.iconBoxMenu} ${classes}`}>
         {
-            children? children : <CustomBtn pathLink={pathLink} classes={'p-2'} label={btnLabel} />
+            children && children 
         }
        
        {iconName? <img src={image[1]} alt="main menu button icon." className="w-100 h-100"  style={{maxWidth: `${dimension.width}`, maxHeight: `${dimension.height}`}} /> : 'no image'}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useMemoizePkmn } from "../../hooks/useMemoizePkmn/useMemoizePkmn";
 import capitalizeString from "../../utils/capitalizeString/capitalizeString";
-import pokemonWindow from '../../assets/pokemon-window.webp'
+import pokemonWindow from '../../assets/template/pokemon-window.webp'
 
 
 const PkmnCard = ({pkmn, reference, iterationIndex, children}) => {

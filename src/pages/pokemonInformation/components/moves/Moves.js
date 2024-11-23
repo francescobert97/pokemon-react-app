@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CmTooltip from "../../../../components/cm-tooltip/CmTooltip";
 import { downloadData2 } from "../../../../utils/downloadData/downloadData";
-import { getPokemonTypeMoves } from "../../../../services/pokemon.service";
-import { imgs } from "../../../../utils/types-map";
+import { typeIconImgs } from "../../../../utils/types-map";
 import Spinner from '../../../../components/spinner/Spinner'
 
 
@@ -11,7 +10,7 @@ const Moves = ({sectionBG,moves}) => {
     const [data, setData] = useState([]);
     const [showTooltip, updateShowTooltip] = useState({tooltipId: null, isOpen: false}); 
     const collectedTypePicture = async () => {
-        const typeImgs = new Map(Object.entries(imgs()).map(d => [d[0], d[1]]))
+        const typeImgs = new Map(Object.entries(typeIconImgs()).map(d => [d[0], d[1]]))
         const fetchedData = await  downloadData2(moves, 'move');
         let dataWithNoErrors = fetchedData.filter(move => !move.err);
        return dataWithNoErrors.map(move => ({...move, typeIcon:  typeImgs.get(move.type.name)}))
