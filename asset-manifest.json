@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pokemon-react-app/static/css/main.012be073.css",
-    "main.js": "/pokemon-react-app/static/js/main.b3033424.js",
+    "main.js": "/pokemon-react-app/static/js/main.b38bea17.js",
     "static/js/453.552e8657.chunk.js": "/pokemon-react-app/static/js/453.552e8657.chunk.js",
     "static/media/background.jpg": "/pokemon-react-app/static/media/background.39fb1da6575c8b5c0eb3.jpg",
     "static/media/Charizard.png": "/pokemon-react-app/static/media/Charizard.ea0ce7bc515383492499.png",
@@ -38,11 +38,11 @@
     "static/media/electric.svg": "/pokemon-react-app/static/media/electric.e594ac2ba54856f8eeca.svg",
     "static/media/loading.svg": "/pokemon-react-app/static/media/loading.9d64573212432d2eb2dc649e421583c5.svg",
     "main.012be073.css.map": "/pokemon-react-app/static/css/main.012be073.css.map",
-    "main.b3033424.js.map": "/pokemon-react-app/static/js/main.b3033424.js.map",
+    "main.b38bea17.js.map": "/pokemon-react-app/static/js/main.b38bea17.js.map",
     "453.552e8657.chunk.js.map": "/pokemon-react-app/static/js/453.552e8657.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.012be073.css",
-    "static/js/main.b3033424.js"
+    "static/js/main.b38bea17.js"
   ]
 }
