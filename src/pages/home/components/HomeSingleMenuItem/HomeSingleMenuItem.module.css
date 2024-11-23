@@ -13,8 +13,8 @@
 }
 
 .contentInfoBox div:first-of-type {
-    top: 21%;
-    left: 18%;
+    top: 10%;
+    left: 38%;
 }
 
 .contentInfoBox div:first-of-type p{
@@ -70,7 +70,7 @@
         min-width: 320px;
     }
     .contentInfoBox div:first-of-type {
-        top: 28%;
+        top: 58%;
         left: 30%;
     }
     .scrollHomeMenu > div > img {

@@ -4,6 +4,7 @@ import { layoutImgs } from "../../../../utils/types-map";
 import { Link } from "react-router-dom";
 
 const HomeSingleMenuItem = ({ homeContents, updateScroll }) => {
+    console.log(updateScroll[0])
   const [isBiggerScreen, setIsBiggerScreen] = useState(true);
   const scrollDivRef = useRef(null);
   const scroller = useRef(null);
@@ -13,12 +14,13 @@ const HomeSingleMenuItem = ({ homeContents, updateScroll }) => {
     window.addEventListener("resize", () =>
       setContentsDependingOnWidthScreen()
     );
+    const scrollDiv = scrollDivRef.current;
 
     scrollDivRef.current.addEventListener("wheel", switchContent);
     window.addEventListener("keydown", scrollContentByArrowKeys);
     scrollDivRef.current.addEventListener("click", handleClick);
     return () => {
-      scrollDivRef.current.removeEventListener("click", handleClick);
+      scrollDiv.removeEventListener("click", handleClick);
     };
   }, []);
   const handleClick = (e) =>
@@ -101,19 +103,11 @@ const HomeSingleMenuItem = ({ homeContents, updateScroll }) => {
           )}
         </div>
 
-        <button className="btn  position-relative align-self-md-end  me-2">
-          <Link to={homeContents[updateScroll[0]].path}>
-            <p className=" absolute-center-element fs-3 fw-bold">GO!</p>
-            <img
-              src={layoutImgs.homeButton}
-              className="w-100"
-              alt="button image-wrap"
-            />
-          </Link>
-        </button>
+     
       </div>
     </div>
   );
 };
 
 export default HomeSingleMenuItem;
+

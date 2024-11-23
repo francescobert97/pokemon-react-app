@@ -1,0 +1,17 @@
+#homeMenuBtn {
+    max-width: 250px;
+    max-height: 120px;
+}
+
+
+@media (max-width: 756px) {
+    #homeMenuBtn {
+        max-width: 150px;
+        max-height: 60px;
+   
+    }
+
+    #homeMenuBtn p {
+        font-size: 0.9em;
+    }
+}

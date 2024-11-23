@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../../redux/thunk";
-import styles from './Home.module.css'
 import HomeSingleMenuItem from "./components/HomeSingleMenuItem/HomeSingleMenuItem";
 import IconBoxMenu from "../../components/iconboxmenu/IconBoxMenu";
-
+import styles from './Home.module.css'
+import HomeMenuBtn from "./components/homeMenuBtn/HomeMenuBtn";
 
 const Home = () => {
     const [scrollIndex, setScrollIndex] = useState(0);
@@ -38,15 +38,18 @@ const Home = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchData())
-    }, [])
+    })
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center gap-5">
             <HomeSingleMenuItem homeContents={homeContents} updateScroll={[scrollIndex, setScrollIndex]}/>
-            <div className="d-flex gap-2">
+            <div className=" d-flex flex-column justify-content-evenly align-items-center flex-md-row gap-5 w-100">
+                <HomeMenuBtn homeContents={homeContents} scrollIndex={scrollIndex}/>
+            <div className={`${styles.linksBar} d-flex  justify-content-center gap-2 flex-grow-1`}>
                 {
                     homeContents.map( (homeContent,index) => <div key={homeContent.bg} onClick={() => setScrollIndex(index)}><IconBoxMenu dimension={{width:'80px', height:'80px'}} iconName={homeContent.bg} /></div>)
                 }
+            </div>
             </div>     
         </div>
     )

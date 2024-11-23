@@ -46,7 +46,7 @@ const PokemonsBoxContainer = ({pkmns,types,classes, noPkmncustomMessage, referen
     
     return (
     <div className="d-flex flex-column ">
-        <CustomBtn classes={'mb-3 mt-3'} pathLink={'/'}/>
+        <CustomBtn classes={'ms-2 mb-3 mt-3'} pathLink={'/'}/>
         <div className={` ${classes} row flex-grow-1 align-items-center gap-1`} style={{overflowY:'scroll'}}>
             {pkmns.length > 0? pkmns.map((pkmn, index) => (
                     <div data-testid={pkmn.uniqueId} key={pkmn.uniqueId} className={`${styles.pkmnCard} d-flex  flex-column align-items-center justify-content-center rounded p-2 col-9 mx-auto col-md-3 overflow-hidden`}>
