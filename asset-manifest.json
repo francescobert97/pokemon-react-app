@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokemon-react-app/static/css/main.eac96a25.css",
-    "main.js": "/pokemon-react-app/static/js/main.e6aafb2a.js",
+    "main.css": "/pokemon-react-app/static/css/main.eb593943.css",
+    "main.js": "/pokemon-react-app/static/js/main.7f9700af.js",
     "static/js/453.552e8657.chunk.js": "/pokemon-react-app/static/js/453.552e8657.chunk.js",
     "static/media/background.webp": "/pokemon-react-app/static/media/background.9aaa09a00cdf09724f35.webp",
     "static/media/pokemonTrainer.webp": "/pokemon-react-app/static/media/pokemonTrainer.0a69f22a2bebcdc95c4a.webp",
@@ -37,12 +37,12 @@
     "static/media/rock.svg": "/pokemon-react-app/static/media/rock.88a9290d3ef8bd4ff3be.svg",
     "static/media/electric.svg": "/pokemon-react-app/static/media/electric.e594ac2ba54856f8eeca.svg",
     "static/media/loading.svg": "/pokemon-react-app/static/media/loading.9d64573212432d2eb2dc649e421583c5.svg",
-    "main.eac96a25.css.map": "/pokemon-react-app/static/css/main.eac96a25.css.map",
-    "main.e6aafb2a.js.map": "/pokemon-react-app/static/js/main.e6aafb2a.js.map",
+    "main.eb593943.css.map": "/pokemon-react-app/static/css/main.eb593943.css.map",
+    "main.7f9700af.js.map": "/pokemon-react-app/static/js/main.7f9700af.js.map",
     "453.552e8657.chunk.js.map": "/pokemon-react-app/static/js/453.552e8657.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eac96a25.css",
-    "static/js/main.e6aafb2a.js"
+    "static/css/main.eb593943.css",
+    "static/js/main.7f9700af.js"
   ]
 }
