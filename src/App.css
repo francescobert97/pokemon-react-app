@@ -52,3 +52,8 @@ body, html {
     left: 50%;
       transform: translate(-50%, -50%);
 }
+
+.cm-window {
+    background-color:#ffde5a;
+    border: 5px solid #5ce2e7;
+}

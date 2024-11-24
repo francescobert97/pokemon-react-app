@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import CustomBtn from "../../../../components/custom-btn/CustomBtn";
 import CustomModal from "../../../../components/custom-modal/CustomModal";
 import { useStoringPkmn } from "../../../../hooks/useStoringPkmn/useStoringPkmn";
-
+import styles from './SmTeamChangeBox.module.css'
 const SmTeamChangeBox=({method,isVisible, modalStateFn}) => {
     const teamPkmn = useSelector(state => state.team.team)
 
@@ -32,21 +32,18 @@ const SmTeamChangeBox=({method,isVisible, modalStateFn}) => {
         updateShowModal(false)
     }
     return (<>
-        {(isVisible.show && isVisible.pkmn.uniqueId) && <div className="bg-dark p-5 position-absolute text-light">
+        {(isVisible.show && isVisible.pkmn.uniqueId) && <div id={styles.SmTeamChangeBox} className="w-100 d-flex gap-2 justify-content-center cm-window p-5 position-fixed top-0 text-light">
                     
                 {teamPkmn.map(pkmn => 
-                     <div onClick={() => test(pkmn)}>
-                        <p>{pkmn.name}</p> 
+                    <div className="d-flex flex-column align-items-center" onClick={() => test(pkmn)}>
                         <img src={pkmn.sprites.front_default} alt="pokemon sprite."/>
                     </div>
                 )}
                 {showModal &&
-                    <CustomModal message={'successfully team updated!'}>
-                        <CustomBtn fn={{fn:setEverithingOff, parameters:[]}} label="Close" />
-
+                    <CustomModal classes={'cm-window p-5'} message={'successfully team updated!'}>
+                        <CustomBtn fn={{fn:setEverithingOff, parameters:[]}} funzione={setEverithingOff} label="Close" />
                     </CustomModal>
                 }
-
     </div>}
     </>)
 }
