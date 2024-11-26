@@ -57,3 +57,7 @@ body, html {
     background-color:#ffde5a;
     border: 5px solid #5ce2e7;
 }
+
+button {
+    border: none!important;
+}

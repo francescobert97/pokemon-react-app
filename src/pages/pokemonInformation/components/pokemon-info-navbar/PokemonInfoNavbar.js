@@ -21,10 +21,10 @@ const PokemonInfoNavbar = () => {
             <ul className={` ${menuOpen? 'd-flex' : 'd-none'} d-md-flex justify-content-around p-4 p-md-0 m-0 col-12`}>
      
                 <li><CustomBtn classes={`${stylesCustomBtn.infoNavbar}`} pathLink={`/${localStorage.getItem('currentReference')}`} label={'Close'} /></li>
-                <li><CustomBtn fn={{fn:openMenu, parameters:[]}} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'abilities'} label={'abilities'} /></li>
-                <li><CustomBtn  fn={{fn:openMenu, parameters:[]}} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'stats'} label={'stats'} /></li>
-                <li><CustomBtn  fn={{fn:openMenu, parameters:[]}} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'moves'} label={'moves'} /></li>
-                <li><CustomBtn  fn={{fn:openMenu, parameters:[]}} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'sprites'} label={'sprites'} /></li>
+                <li><CustomBtn funzione={openMenu} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'abilities'} label={'abilities'} /></li>
+                <li><CustomBtn funzione={openMenu} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'stats'} label={'stats'} /></li>
+                <li><CustomBtn funzione={openMenu} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'moves'} label={'moves'} /></li>
+                <li><CustomBtn  funzione={openMenu} classes={`${stylesCustomBtn.infoNavbar}`} pathLink={'sprites'} label={'sprites'} /></li>
             </ul>
         </div>
 

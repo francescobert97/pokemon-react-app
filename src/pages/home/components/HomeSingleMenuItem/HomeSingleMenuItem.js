@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./HomeSingleMenuItem.module.css";
 import { layoutImgs } from "../../../../utils/types-map";
-import { Link } from "react-router-dom";
 
 const HomeSingleMenuItem = ({ homeContents, updateScroll }) => {
-    console.log(updateScroll[0])
   const [isBiggerScreen, setIsBiggerScreen] = useState(true);
   const scrollDivRef = useRef(null);
   const scroller = useRef(null);
 
   useEffect(() => {
+    console.log(layoutImgs)
     setContentsDependingOnWidthScreen();
     window.addEventListener("resize", () =>
       setContentsDependingOnWidthScreen()
@@ -82,26 +81,32 @@ const HomeSingleMenuItem = ({ homeContents, updateScroll }) => {
       </div>
 
       <div
-        className={`${styles.contentInfoBox} d-flex flex-column flex-md-row position-relative gap-5 text-dark`}
+        className={`${styles.contentInfoBox} d-flex flex-column position-relative justify-content-center align-items-center gap-1 text-dark`}
       >
+        
         <img
           src={
             isBiggerScreen
-              ? layoutImgs.pokemonTitlebarLarge
+              ? layoutImgs.pokemonTitlebar
               : layoutImgs.pokemonTitlebar
           }
           alt="custom box"
         />
-        <div className="position-absolute w-25 d-flex flex-column ">
-          <h1 className="custom-text-shadow fs-l-1 fs-4 fs-md-3 mb-l-3">
+
+          <h1 className="position-absolute  custom-text-shadow fs-l-1 fs-4 fs-md-3 mb-l-3">
             {homeContents[updateScroll[0]]?.nameSection}
           </h1>
-          {isBiggerScreen && (
-            <p className=" custom-text-shadow ">
+        
+     
+
+        {isBiggerScreen && (
+          <div className="ms-4 position-relative">
+            <img className="" src={layoutImgs.pokemonWindow} alt="pokemon window"/>
+            <p className=" w-50 absolute-center-element custom-text-shadow ">
               {homeContents[updateScroll[0]]?.description}
             </p>
+          </div>
           )}
-        </div>
 
      
       </div>

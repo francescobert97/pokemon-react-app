@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import CustomBtn from "../../components/custom-btn/CustomBtn";
 import { useMemoizePkmn } from "../../hooks/useMemoizePkmn/useMemoizePkmn";
@@ -46,7 +46,7 @@ const Pokedex = () => {
     useHasUnmounted(!storedPokemonInformation.name?{fn:storePkmnInformation, params: [{},'memoize'], isEnabledInMounting: true} : {fn:storePkmnInformation, params:[], isEnabledInMounting: false}, '' )
 
    return (
-        <div className="container-fluid  g-0 d-flex flex-column  align-items-center text-dark">
+        <div className="container-fluid  g-0 d-flex flex-column text-dark align-items-center ">
           
                 <CustomBtn  classes={'align-self-start p-2 mt-1 mb-2'} pathLink={'/'}/>
         
@@ -61,10 +61,10 @@ const Pokedex = () => {
                     ) : <p>No records found!</p>}
                 </div>
 
-                <div className="overflow-hidden  col-12 order-1 cm-window  mx-auto col-md-8  text-dark d-flex flex-column justify-content-start align-items-center p-3">
+                <div className="overflow-hidden  col-12 order-1 cm-window  mx-auto col-md-8 d-flex flex-column justify-content-start align-items-center p-3">
 
                     { storedPokemonInformation.name?
-                        <div className="w-100 h-100 d-flex flex-column align-items-center  text-light mt-4 rounded" >
+                        <div className="w-100 h-100 d-flex flex-column align-items-center   mt-4 rounded" >
                             <h3 className="mt-3">{capitalizeString(storedPokemonInformation.name)}</h3>
                             <img src={storedPokemonInformation.sprites.front_default} alt="Pokemon sprite"  style={{zoom: '200%'}}/>
                            <p>

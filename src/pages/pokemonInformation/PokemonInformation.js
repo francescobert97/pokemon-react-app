@@ -8,7 +8,6 @@ import PokemonInfoNavbar from "./components/pokemon-info-navbar/PokemonInfoNavba
 import Sprites from "./components/sprites/Sprites";
 import Stats from "./components/stats/Stats";
 import Moves from "./components/moves/Moves";
-import imgBox from '../../assets/template/pokemon-window.webp'
 
 
 const PokemonInformation = () => {
@@ -24,10 +23,10 @@ const PokemonInformation = () => {
                 <div className="w-100 d-flex justify-content-center align-items-center flex-grow-1">
                     <Routes>
                         <Route path="/" element={<Navigate to={"abilities"} replace />} />
-                        <Route path="/abilities" element={<Abilities sectionBg={imgBox} abilities={pkmn.abilities}/>} key='abilities' />
-                        <Route path="stats" element={<Stats sectionBg={imgBox} stats={pkmn.stats}/>} key='stats' />
-                        <Route path="moves" element={<Moves sectionBg={imgBox} moves={pkmn.moves} key='moves'/>} />
-                        <Route path="sprites" element={<Sprites sectionBg={imgBox} sprites={pkmn.sprites}/>} key='sprites' />
+                        <Route path="/abilities" element={<Abilities  abilities={pkmn.abilities}/>} key='abilities' />
+                        <Route path="stats" element={<Stats stats={pkmn.stats}/>} key='stats' />
+                        <Route path="moves" element={<Moves  moves={pkmn.moves} key='moves'/>} />
+                        <Route path="sprites" element={<Sprites sprites={pkmn.sprites}/>} key='sprites' />
                     </Routes>
                 </div>
             </div>

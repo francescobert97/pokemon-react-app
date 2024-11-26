@@ -1,9 +1,7 @@
 import { getAllPokemonNameList } from "../services/pokemon.service";
 import { fetchFailure, fetchRequest, fetchSuccess } from "./actions/fetch.action";
-console.log('start')
 
 export const fetchData = () => async (dispatch) => {
-  console.log('start')
 
         const rootPersistedData = localStorage.getItem('persist:root');
         let persistedDataResult = null;
@@ -21,7 +19,6 @@ export const fetchData = () => async (dispatch) => {
     dispatch(fetchRequest());
 
     const response = await getAllPokemonNameList();
-    console.log(response)
     try {
     dispatch(fetchSuccess(response));
     }

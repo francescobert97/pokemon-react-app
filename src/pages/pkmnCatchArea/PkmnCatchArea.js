@@ -11,8 +11,9 @@ const PkmnCatchArea = () => {
     const pokemonData = useSelector(state => state.fetch.data)
     const [randomPkmn, setRandomPkmn] = useState(null)
     const storingPkmn = useStoringPkmn()
+
     const sendPokemon = (operation) => {
-        if(operation === 'escape' || !operation) {
+        if(!operation) {
             return;
         }
         storingPkmn({type:operation, pkmn:randomPkmn})
@@ -38,10 +39,9 @@ const PkmnCatchArea = () => {
                 <img className="h-100 w-100" alt="pokemon sprite" src={randomPkmn.sprites.front_default}  style={{maxWidth: '350px', minHeight: '300px'}}/>
 
                 <div className="d-flex gap-2 mb-5">
-                    <CustomBtn label={'Send to Team'} pathLink={'/'} classes={''} conditionToDisableBtn={teamStore.length>=6} fn={{fn:sendPokemon, parameters: ['add-to-team']}}/>
-                    <CustomBtn label={'Send to Box'} pathLink={'/'} classes={''}  fn={{fn:sendPokemon, parameters: ['add-to-box']}}/>
-                    <CustomBtn label={'Escape'} pathLink={'/'} classes={''}  fn={{fn:sendPokemon, parameters: ['escape']}}/>
-
+                    {teamStore.length < 6 && <CustomBtn label={'Send to Team'} pathLink={'/'} classes={''} conditionToDisableBtn={teamStore.length>=6} funzione={() => sendPokemon('add-to-team')}/>}
+                    <CustomBtn label={'Send to Box'} pathLink={'/'} classes={''}  funzione={() => sendPokemon('add-to-box')}/>
+                    <CustomBtn label={'Escape'} pathLink={'/'} classes={''}  />
                 </div>
              </div> : <Spinner />}
         </>

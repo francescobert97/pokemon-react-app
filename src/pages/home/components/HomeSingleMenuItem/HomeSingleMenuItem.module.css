@@ -12,13 +12,16 @@
     height: clamp(300px 350px 350px);
 }
 
-.contentInfoBox div:first-of-type {
-    top: 10%;
-    left: 38%;
+.contentInfoBox h1 {
+  top: 18%;
+  left: 40%;
 }
 
+.contentInfoBox div:first-of-type img {
+    max-height: 400px;
+}
 .contentInfoBox div:first-of-type p{
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 .scrollHomeMenu button {
@@ -51,13 +54,12 @@
         max-width: 320px;
         height: clamp(300px 350px 350px);
         }
-    .contentInfoBox div:first-of-type {
-        top: 10%;
-        left: 15%;
-    }
-    .contentInfoBox div:first-of-type p{
-        font-size: 0.7em;
-    }
+  
+        .contentInfoBox h1 {
+            top: 16%;
+            left: 35%;
+        }
+      
     .scrollHomeMenu > div > img {
         max-width: 250px;
         max-height: 250px;
@@ -69,10 +71,11 @@
     .contentInfoBox img:nth-child(1) {
         min-width: 320px;
     }
-    .contentInfoBox div:first-of-type {
-        top: 58%;
-        left: 30%;
+    .contentInfoBox h1 {
+        top: 55%;
+        left: 32%;
     }
+   
     .scrollHomeMenu > div > img {
         max-width: 250px;
         max-height: 250px;
